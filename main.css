@@ -1,0 +1,94 @@
+body {
+  background-color: black;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Stlying for Header and Footer */
+nav ul, footer ul {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin:0px;
+  padding:0px;
+  color: white;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding: 10px 50px 0px 50px;
+  font-size: 24px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Stlying the Hero Image container */
+.hero {
+  position: relative;
+}
+
+/* Stlying the Call to Action Hero Image */
+.callToAction {
+  height: 100%;
+  width: 99%;
+  padding-left: 15px;
+}
+
+/* Stlying Call to Action button */
+.callToActionButton {
+  /* appearance */
+  background-color: #c91c1c;
+  border-radius: 10px;
+  padding: 10px;
+  width:200px;
+  color: white;
+  font-size: 26px;
+  text-decoration: none;
+  /* position */
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  /* display of children */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Stlying for Footer */
+footer p {
+  float: right;
+  color: grey;
+  margin: -19px 0px;
+}
+
+footer ul li {
+  padding: 0px 10px 0px 10px;
+}
+
+.socialImage {
+  height: 50px;
+}
+
+
+/* About Modal Styling */
+#aboutModal {
+  background-color:white;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 500px;
+  height: 200px;
+  left: 730px;
+  top: 125px;
+  border-radius: 10px;
+}
+
+.close {
+  position: fixed;
+  left: 1200px;
+  top: 125px;
+  color: red;
+  cursor: pointer;
+}

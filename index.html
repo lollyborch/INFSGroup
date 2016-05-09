@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Film Noir PhotoBooth</title>
+  <!-- Meta Information -->
+  <meta charset="utf-8"/>
+  <meta name="Author" content="Lyndon Moore"/>
+  <meta name="Description" content="A fun photo photo capturing website built in PHP and JavaScript"/>
+  <meta name="keywords" content="photo, booth, image, film, noir"/>
+  <!-- Link to Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+<body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a id="aboutButton" href=#1>About</a></li>
+          <li><a id="loginButton" href=#2>Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <a class="callToActionButton" role="button" tabindex="0" onclick="dosomething">
+        <i class="fa fa-2x fa-camera-retro" aria-hidden="true"></i>
+        Take a Shot
+      </a>
+      <img class="callToAction" src="images/hero2.jpg" alt="Shady character holding whisky glass"/>
+    </section>
+    <section id="aboutModal">
+      <div class="aboutContent">
+        <p class="close">X</p>
+        <p>About the project</p>
+      </div>
+    </section>
+    <footer>
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/">
+            <img class="socialImage" src="images/facebook.png" alt="facebook"/>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/?hl=en">
+            <img class="socialImage" src="images/instagram.png" alt="instagram"/>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/?lang=en">
+            <img class="socialImage" src="images/twitter.png" alt="twitter"/>
+          </a>
+        </li>
+      </ul>
+      <p>Copyright &copy; 2016</p>
+    </footer>
+    <script src="modal.js"></script>
+</body>
+</html>
