@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>Camera Tutorial workthrough</title>
+  <!--
+  This Code is based off the following of MDN Tutorial found at
+  https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos
+
+  getUserMedia() requires HTTPS!!!
+  -->
+</head>
+<body>
+  <div class="camera">
+      <video id="video">Video Stream not Available</video>
+      <button id="startButton">Take Photo</button>
+      <canvas id="canvas"></canvas>
+  </div>
+  <div class="output">
+    <img id="photo" alt="The Screen Capture will appear in this box"/>
+  </div>
+<script src="js\camera.js"></script>
+</body>
+</html>
