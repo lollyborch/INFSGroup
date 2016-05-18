@@ -92,3 +92,15 @@ footer ul li {
   color: red;
   cursor: pointer;
 }
+
+
+/* Camera Styling */
+.camera, .output {
+  display: none;
+  position: relative;
+  left: 200px;
+  top: -540px;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}

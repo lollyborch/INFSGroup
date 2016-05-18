@@ -6,36 +6,83 @@ getUserMedia() requires HTTPS!!!
 */
 
 // Initial Camera Setting Variables
-var width = 320;
+// Width will need to change on break points height is auto for aspect ratio.
+var width = 640;
 var height = 0;
 
 var streaming = false;
 
+var camera = null;
 var video = null;
 var canvas = null;
 var photo = null;
-var startbutton = null;
+var takePhotoButton = null;
+var openCameraButton = null;
 
 //Cookie stuff MOVE TO ANOTHER JS PROBABLY
 // Returns a Boolean value indicating whether cookies are enabled or not (read-only).
 Navigator.cookieEnabled;
 
-// This function assignts all the Elements on page Load  => null
+// Initializing Variables and Event Listeners
 function assignElements() {
   video = document.getElementById("video");
   canvas = document.getElementById("canvas");
   photo = document.getElementById("photo");
-  startButton = document.getElementById("startButton");
+  takePhotoButton = document.getElementById("takePhotoButton");
+  openCameraButton = document.getElementById("openCameraButton");
+  camera = document.getElementsByClassName("camera")[0];
 };
 
-function getMediaStream() {
+// Open Camera Application
+function openCamera() {
+  openCameraButton.addEventListener("click",function(ev) {
+    openCameraButton.style.display = "none";
+    camera.style.display = "inline-block";
+  })
+}
 
+// Handle the Image capture when Button is pressed
+function buttonReady() {
+  takePhotoButton.addEventListener("click",function(ev) {
+    captureImage();
+    ev.preventDefault();
+  })
+};
+
+/*
+Set Video and Canvas Dimensions once Stream has been captured.
+*/
+function videoReady() {
+  video.addEventListener("canplay", function configStream(ev) {
+    if (!streaming) {
+      height = video.videoHeight / (video.videoWidth/width);
+
+      if (isNaN(height)) {
+        height = width / (4/3);
+      }
+      console.log(video.width);
+      video.setAttribute("width",width);
+      video.setAttribute("height",height);
+      canvas.setAttribute("width",width);
+      canvas.setAttribute("height",height);
+      console.log(video.width);
+      streaming = true;
+    }
+  })
+};
+
+/*
+This function prompts for camera access and gets the media stream.
+The media stream is convereted to a url object and passed to the
+HTML video element. The video stream is then played.
+*/
+function getMediaStream() {
+  // Prefixes to ensure that the correct function is called.
   navigator.getmedia = (navigator.getUserMedia ||
                           navigator.webkitGetUserMedia ||
                           navigator.mozGetUserMedia ||
                           navigator.msGetUserMedia)
-                          console.log(navigator);
-                          console.log(navigator.getmedia);
+  // navigator.getmedia(constraints,sucess(stream),failure(error))
   navigator.getmedia(
     {
     video: true,
@@ -44,12 +91,10 @@ function getMediaStream() {
     function(stream) {
       if(navigator.mozGetUserMedia) {
         video.mozSrcObject = stream;
-        console.log("Mozilla Baby");
       }
       else {
         var vendorURL = window.URL || window.webkitURL;
         video.src = vendorURL.createObjectURL(stream);
-        console.log("Ended up here");
       }
       video.play();
     },
@@ -59,5 +104,39 @@ function getMediaStream() {
   );
 };
 
+/*
+Clear the current Photo
+*/
+function clearPhoto() {
+  var context = canvas.getContext("2d");
+  context.fillStyle = "#AAA";
+  context.fillRect(0,0,canvas.width,canvas.height);
+
+  var data = canvas.toDataURL("image/png");
+  photo.setAttribute("src",data);
+};
+
+
+/*
+Capture the current frame of the Media stream.
+*/
+function captureImage() {
+  var context = canvas.getContext("2d");
+  if (width && height) {
+    canvas.width = width;
+    canvas.height = height;
+    context.drawImage(video,0,0,width,height);
+
+    var data = canvas.toDataURL("image/png");
+    photo.setAttribute("src",data);
+  }
+  else {
+    clearPhoto();
+  }
+};
+
 assignElements();
+openCamera();
 getMediaStream();
+videoReady();
+buttonReady();
