@@ -2,7 +2,9 @@
     
     body {
       background-color: black;
-      font-family: 'Arial Narrow', Arial, sans-serif;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 300;    
+      
     }
 
     /* Stlying for Header and Footer */
@@ -17,7 +19,7 @@
     }
 
     nav ul li {
-      padding: 10px 50px 0px 50px;
+      padding: 10px 50px 0px;
       font-size: 24px;
     }
 
@@ -46,7 +48,7 @@
       padding: 10px;
       width:200px;
       color: white;
-      font-size: 26px;
+      font-size: 24px;
       text-decoration: none;
       /* position */
       position: absolute;
@@ -139,6 +141,10 @@
         width: 22%;
     }
     
+    .callToAction {
+        margin-top: 5%;
+    }
+    
 }
 
 @media only screen and (max-width:830px){
@@ -147,6 +153,10 @@
         /* 50% - (width/2) */
         left: 37%;
         width: 26%;
+    }
+    
+    .callToAction {
+        margin-top: 7%;
     }
     
 }
@@ -159,7 +169,7 @@
     
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:630px){
     
     .callToActionButton {
         /* 50% - (width/2) */
@@ -167,15 +177,32 @@
         width: 30%;
     }
     
+    footer p {
+        text-align:center;
+        float: none;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .callToAction {
+    width: 130%;
+    padding-left: 0;
+}
+    
 }
 
-@media only screen and (max-width:515px){
+@media only screen and (max-width:545px){
     
     .callToActionButton {
         /* 50% - (width/2) */
         left: 32%;
         width: 36%;
     }
+    
+    .callToAction {
+    width: 185%;
+    margin-left: -23%;
+}
     
 }
 
@@ -185,7 +212,17 @@
         /* 50% - (width/2) */
         left: 20%;
         width: 60%;
-        font-size: 33px;
+        font-size: 28px;
+    }
+    
+    .callToAction {
+    width: 225%;
+    margin-left: -45%;
+    margin-top: 13%;
+    }
+    
+    nav ul li {
+    padding: 10px 30px 0px;
     }
     
 }
@@ -251,16 +288,16 @@
     display:block;
     position: relative;
     z-index: 1;
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    font-size: 44px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 30px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
     margin-right: 10px;
-    color: #212121;
-    background-color: #fff;
+    color: #fff;
+    
 }
 
 .soc a:hover {
