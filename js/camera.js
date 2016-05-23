@@ -9,7 +9,7 @@ getUserMedia() requires HTTPS!!!
 // Width will need to change on break points height is auto for aspect ratio.
 var width = 1020;
 var height = 0;
-
+var   i = 0;
 var streaming = false;
 
 //Cookie stuff MOVE TO ANOTHER JS PROBABLY
@@ -27,6 +27,10 @@ function assignElements() {
   openCameraButton = document.getElementById("openCameraButton");
   openCameraButton.addEventListener("click", openCamera);
   camera = document.getElementsByClassName("camera")[0];
+  filterLeft = document.getElementById("filterLeft");
+  filterLeft.addEventListener("click", changeFilter);
+  filterRight = document.getElementById("filterRight");
+  filterRight.addEventListener("click", changeFilter);
 };
 
 // Open Camera Application
@@ -104,8 +108,11 @@ function clearPhoto() {
 Capture the current frame of the Media stream.
 */
 function captureImage() {
-  var context = canvas.getContext("2d");
-  if (width && height) {
+  if (takePhotoButton.innerHTML == "Take Photo") {
+    var context = canvas.getContext("2d");
+    takePhotoButton.innerHTML = "Retake Photo";
+    filterLeft.style.display = "inline-block";
+    filterRight.style.display = "inline-block";
     canvas.width = width;
     canvas.height = height;
     context.drawImage(video,0,0,width,height);
@@ -117,8 +124,28 @@ function captureImage() {
   }
   else {
     clearPhoto();
+    takePhotoButton.innerHTML = "Take Photo";
+    photo.style.display = "none";
+    video.style.display = "inline-block";
+    filterLeft.style.display = "none";
+    filterRight.style.display = "none";
   }
 };
+
+function changeFilter(x) {
+  if (x.target.id == "filterRight") {
+    photo.classList.remove("filter" + i);
+    i += 1;
+    photo.classList.add("filter" + i);
+  }
+  else {
+    photo.classList.remove("filter" + i);
+    i -= 1;
+    photo.classList.add("filter" + i);
+  }
+  console.log(x.target.id);
+  console.log(i);
+}
 
 assignElements();
 getMediaStream();
