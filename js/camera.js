@@ -44,9 +44,6 @@ function configStream() {
     if (!streaming) {
       height = video.videoHeight / (video.videoWidth/width);
 
-      if (isNaN(height)) {
-        height = width / (4/3);
-      }
       console.log(video.width);
       video.setAttribute("width",width);
       video.setAttribute("height",height);

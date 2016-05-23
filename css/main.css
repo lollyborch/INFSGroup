@@ -116,6 +116,10 @@
 
     /* Camera Styling */
     .camera {
+      /* test */
+      max-width: 1020px;
+      width: 55%;
+      /* end test*/
       display: none;
       position: relative;
       left: 450px;
@@ -326,4 +330,10 @@
 }
 .soc-instagram:before {
     content:'x';
+}
+
+
+/* testing */
+#video, #photo {
+  width:100%
 }
