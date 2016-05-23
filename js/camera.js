@@ -12,13 +12,6 @@ var height = 0;
 
 var streaming = false;
 
-var camera = null;
-var video = null;
-var canvas = null;
-var photo = null;
-var takePhotoButton = null;
-var openCameraButton = null;
-
 //Cookie stuff MOVE TO ANOTHER JS PROBABLY
 // Returns a Boolean value indicating whether cookies are enabled or not (read-only).
 Navigator.cookieEnabled;
@@ -26,36 +19,28 @@ Navigator.cookieEnabled;
 // Initializing Variables and Event Listeners
 function assignElements() {
   video = document.getElementById("video");
+  video.addEventListener("canplay", configStream);
   canvas = document.getElementById("canvas");
   photo = document.getElementById("photo");
   takePhotoButton = document.getElementById("takePhotoButton");
+  takePhotoButton.addEventListener("click",captureImage);
   openCameraButton = document.getElementById("openCameraButton");
+  openCameraButton.addEventListener("click", openCamera);
   camera = document.getElementsByClassName("camera")[0];
 };
 
 // Open Camera Application
 function openCamera() {
-  openCameraButton.addEventListener("click",function(ev) {
     openCameraButton.style.display = "none";
     canvas.style.display = "none";
     photo.style.display = "none";
     camera.style.display = "inline-block";
-  })
 }
-
-// Handle the Image capture when Button is pressed
-function buttonReady() {
-  takePhotoButton.addEventListener("click",function(ev) {
-    captureImage();
-    ev.preventDefault();
-  })
-};
 
 /*
 Set Video and Canvas Dimensions once Stream has been captured.
 */
-function videoReady() {
-  video.addEventListener("canplay", function configStream(ev) {
+function configStream() {
     if (!streaming) {
       height = video.videoHeight / (video.videoWidth/width);
 
@@ -70,7 +55,6 @@ function videoReady() {
       console.log(video.width);
       streaming = true;
     }
-  })
 };
 
 /*
@@ -140,7 +124,4 @@ function captureImage() {
 };
 
 assignElements();
-openCamera();
 getMediaStream();
-videoReady();
-buttonReady();
