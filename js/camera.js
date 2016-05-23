@@ -124,6 +124,8 @@ function captureImage() {
   }
   else {
     clearPhoto();
+    photo.classList.remove("filter" + i);
+    i = 0;
     takePhotoButton.innerHTML = "Take Photo";
     photo.style.display = "none";
     video.style.display = "inline-block";
