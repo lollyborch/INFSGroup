@@ -1,10 +1,10 @@
 @media screen{
-    
+
     body {
       background-color: black;
       font-family: 'Roboto', Arial, sans-serif;
-      font-weight: 300;    
-      
+      font-weight: 300;
+
     }
 
     /* Stlying for Header and Footer */
@@ -22,7 +22,7 @@
       padding: 10px 50px 10px;
       font-size: 24px;
     }
-    
+
     nav ul li:hover {
       background-color: #2b2b2b;
       transition: background-color 0.3s ease-in-out;
@@ -66,7 +66,7 @@
       align-items: center;
 
     }
-    
+
     footer {
         position: absolute;
         bottom: 0;
@@ -115,121 +115,124 @@
 
 
     /* Camera Styling */
-    .camera, .output {
+    .camera {
       display: none;
       position: relative;
-      left: 200px;
-      top: -540px;
+      left: 450px;
+      top: -825px;
       margin: 0px;
       border: 0px;
       padding: 0px;
     }
 
-    
+    #takePhotoButton {
+      left: 50%;
+      top: 90%;
+      position: absolute;
+    }
 }
 
 @media only screen and (max-width:1280px){
-    
+
     .callToActionButton {
         /* 50% - (width/2) */
         left: 41%;
         width: 18%;
     }
-    
 }
 
 @media only screen and (max-width:995px){
-    
+
     .callToActionButton {
         /* 50% - (width/2) */
         left: 39%;
         width: 22%;
     }
-    
+
     .callToAction {
         margin-top: 5%;
     }
-    
+
 }
 
 @media only screen and (max-width:830px){
-    
+
     .callToActionButton {
         /* 50% - (width/2) */
         left: 37%;
         width: 26%;
     }
-    
+
     .callToAction {
         margin-top: 7%;
     }
-    
+
 }
 
 @media only screen and (max-width:700px){
-    
+
     .callToActionButton {
         font-size: 22px;
     }
-    
+
 }
 
 @media only screen and (max-width:630px){
-    
+
     .callToActionButton {
         /* 50% - (width/2) */
         left: 35%;
         width: 30%;
     }
-    
+
     footer p {
         text-align:center;
         float: none;
         margin-top: 10px;
         margin-bottom: 5px;
     }
-    
+
     .callToAction {
     width: 130%;
     padding-left: 0;
 }
-    
+
 }
 
 @media only screen and (max-width:545px){
-    
+
     .callToActionButton {
         /* 50% - (width/2) */
         left: 32%;
         width: 36%;
     }
-    
+
     .callToAction {
     width: 185%;
     margin-left: -23%;
 }
-    
+
 }
 
 @media only screen and (max-width:475px){
-    
+
     .callToActionButton {
         /* 50% - (width/2) */
         left: 20%;
         width: 60%;
         font-size: 28px;
     }
-    
+
     .callToAction {
     width: 225%;
     margin-left: -45%;
     margin-top: 13%;
     }
-    
+
     nav ul li {
     padding: 10px 30px 10px;
     }
-    
+
 }
 
 /* social icons from perfecticons.com */
@@ -243,9 +246,9 @@
          url('../fonts/socicon.svg#icomoonregular') format('svg');
     font-weight: normal;
     font-style: normal;
- 
+
 }
- 
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     @font-face {
         font-family:si;
@@ -302,7 +305,7 @@
     border-radius: 100px;
     margin-right: 10px;
     color: #fff;
-    
+
 }
 
 .soc a:hover {

@@ -7,7 +7,7 @@ getUserMedia() requires HTTPS!!!
 
 // Initial Camera Setting Variables
 // Width will need to change on break points height is auto for aspect ratio.
-var width = 640;
+var width = 1020;
 var height = 0;
 
 var streaming = false;
@@ -37,6 +37,8 @@ function assignElements() {
 function openCamera() {
   openCameraButton.addEventListener("click",function(ev) {
     openCameraButton.style.display = "none";
+    canvas.style.display = "none";
+    photo.style.display = "none";
     camera.style.display = "inline-block";
   })
 }
@@ -129,6 +131,8 @@ function captureImage() {
 
     var data = canvas.toDataURL("image/png");
     photo.setAttribute("src",data);
+    photo.style.display = "inline-block";
+    video.style.display = "none";
   }
   else {
     clearPhoto();

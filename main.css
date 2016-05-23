@@ -1,5 +1,5 @@
 @media screen{
-    
+
     body {
       background-color: black;
       font-family: 'Arial Narrow', Arial, sans-serif;
@@ -59,7 +59,7 @@
       align-items: center;
 
     }
-    
+
     footer {
         position: absolute;
         bottom: 0;
@@ -111,83 +111,83 @@
     .camera, .output {
       display: none;
       position: relative;
-      left: 200px;
-      top: -540px;
+      left: 450px;
+      top: -813px;
       margin: 0px;
       border: 0px;
       padding: 0px;
     }
 
-    
+
 }
 
 @media only screen and (max-width:1280px){
-    
+
     .callToActionButton {
         /* 50% - (width/2) */
         left: 41%;
         width: 18%;
     }
-    
+
 }
 
 @media only screen and (max-width:995px){
-    
+
     .callToActionButton {
         /* 50% - (width/2) */
         left: 39%;
         width: 22%;
     }
-    
+
 }
 
 @media only screen and (max-width:830px){
-    
+
     .callToActionButton {
         /* 50% - (width/2) */
         left: 37%;
         width: 26%;
     }
-    
+
 }
 
 @media only screen and (max-width:700px){
-    
+
     .callToActionButton {
         font-size: 22px;
     }
-    
+
 }
 
 @media only screen and (max-width:600px){
-    
+
     .callToActionButton {
         /* 50% - (width/2) */
         left: 35%;
         width: 30%;
     }
-    
+
 }
 
 @media only screen and (max-width:515px){
-    
+
     .callToActionButton {
         /* 50% - (width/2) */
         left: 32%;
         width: 36%;
     }
-    
+
 }
 
 @media only screen and (max-width:475px){
-    
+
     .callToActionButton {
         /* 50% - (width/2) */
         left: 20%;
         width: 60%;
         font-size: 33px;
     }
-    
+
 }
 
 /* social icons from perfecticons.com */
@@ -201,9 +201,9 @@
          url('../fonts/socicon.svg#icomoonregular') format('svg');
     font-weight: normal;
     font-style: normal;
- 
+
 }
- 
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     @font-face {
         font-family:si;
