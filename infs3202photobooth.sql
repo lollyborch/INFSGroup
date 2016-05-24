@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `images` (
   `img_ID` int(11) NOT NULL,
   `user_ID` int(11) NOT NULL,
   `img_name` varchar(50) NOT NULL,
-  `img_stamp` datetime(6) NOT NULL
+  `img_stamp` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
