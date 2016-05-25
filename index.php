@@ -1,9 +1,7 @@
 <?php 
-
 session_start();
 
-//login from week 5 tutorial
-
+include ("database.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,10 +12,10 @@ session_start();
   <meta name="Author" content="Lyndon Moore, Sarah Balsillie, Lilly Borchardt"/>
   <meta name="Description" content="A fun photo photo capturing website built in PHP and JavaScript"/>
   <meta name="keywords" content="photo, booth, image, film, noir"/>
-  <!-- Link to Stylesheets -->
+  <!-- Link to Stylesheets 
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/main.css"/>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:500,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:500,300' rel='stylesheet' type='text/css'>-->
 </head>
 <body>
     <header>
@@ -26,6 +24,7 @@ session_start();
           <li><a href="index.html">Home</a></li>
           <li><a id="aboutButton" href=#1>About</a></li>
           <li><a id="loginButton" href=#2>Login</a></li>
+            <li><a id="logoutButton" href=logout.php>Logout</a></li>
         </ul>
       </nav>
     </header>
@@ -41,11 +40,11 @@ session_start();
    
         ?>
         
-        <form method="POST">
+        <form action="login.php" method="POST">
             
             <p>Login to take a shot</p>
-            <p>Username: <input type="text" id="username" name="username"></p>
-            <p>Password: <input type="text" id="password" name="password"></p>
+            <p>Email: <input type="email" id="email" name="email" required></p>
+            <p>Password: <input type="password" id="password" name="password" required></p>
             <p><input type="submit" name="submit" id="submit" value="Login"</p>
         
         
@@ -56,6 +55,8 @@ session_start();
     
     
     </section>
+    
+    
     <section class="hero">
       <a  id="openCameraButton" class="callToActionButton" role="button" tabindex="0">
         <i class="fa fa-2x fa-camera-retro" aria-hidden="true"></i>

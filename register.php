@@ -8,16 +8,10 @@ include ("database.php");
 
 if(isset($_POST["submit"]))
 	{
-        $firstname = $_POST["firstname"];
-        $lastname = $_POST["lastname"];
-		$email = $_POST["email"];
-		$password = $_POST["password"];
-        
-    
-        $firstname = mysqli_real_escape_string($db, $firstname);
-        $lastname = mysqli_real_escape_string($db, $lastname);
-		$email = mysqli_real_escape_string($db, $email);
-		$password = mysqli_real_escape_string($db, $password);
+        $firstname = mysqli_real_escape_string($db, $_POST["firstname"]);
+        $lastname = mysqli_real_escape_string($db, $_POST["lastname"]);
+		$email = mysqli_real_escape_string($db, $_POST["email"]);
+		$password = mysqli_real_escape_string($db, $_POST["password"]);
 		$password = md5($password);
 		
 		
