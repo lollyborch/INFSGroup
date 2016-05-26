@@ -99,23 +99,26 @@
 
     /* About Modal Styling */
     #aboutModal, #loginModal {
-      background-color:white;
-      display: none;
-      position: fixed;
-      z-index: 1;
-      width: 500px;
-      height: 200px;
-      left: 730px;
-      top: 125px;
-      border-radius: 10px;
+        background-color: white;
+        display: none;
+        position: fixed;
+        z-index: 1;
+        width: 60%;
+        height: auto;
+        min-height: 200px;
+        left: 20%;
+        top: 20%;
+        border-radius: 1px;
+        padding: 50px;
     }
 
-    .close {
-      position: fixed;
-      left: 1200px;
-      top: 125px;
-      color: red;
-      cursor: pointer;
+    #closeAbout, #closeLogin {
+        position: fixed;
+        left: 84%;
+        top: 18%;
+        color: red;
+        cursor: pointer;
+        font-size: 30px;
     }
 
 

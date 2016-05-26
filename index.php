@@ -47,7 +47,7 @@ include ("database.php");
     </section>
     <section id="loginModal">
       <div class="aboutContent">
-        <p class="close">X</p>
+        <p id="closeLogin">X</p>
         <h1>Login to Photoshot</h1>
         
         <?php
@@ -76,7 +76,7 @@ include ("database.php");
     </section>
     <section id="aboutModal">
       <div class="aboutContent">
-        <p class="close">X</p>
+        <p id="closeAbout">X</p>
         <p>About the project</p>
       </div>
     </section>
