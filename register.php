@@ -61,30 +61,37 @@ if(isset($_POST["submit"]))
         </ul>
       </nav>
     </header>
-    
-    <section style="background-color: white; color: black; margin: 100px; padding: 50px;">
-        <p>register</p>
         
-        
-        
-        <?php
+        <section class="loginbox">
+            
+             <?php
         // checks is 'error' variable has been set
       //   if (isset($_SESSION['error'])) {
       //       echo "<div>".$_SESSION['error']."</div>";
       //   }
    
         ?>
+            
+        <h1>Register for Photoshot</h1>
+            
+            <form action="checklogin.php" method="POST">
+            <div id="flexform">
+                <label>First name: &nbsp; </label> <input type="text" id="firstname" name="firstname" required />
+            </div>
+            <div id="flexform">
+                <label>Last name: &nbsp; </label> <input type="text" id="lastname" name="lastname" required />
+            </div>
+            <div id="flexform">
+                <label>Email: &nbsp; </label> <input type="email" id="email" name="email" required />
+            </div>
+            <div id="flexform">
+                <label>Password: &nbsp; </label> <input type="password" id="password" name="password" required />
+            </div>
+            <div>
+                <p class="registerText"><a href="index.php#2">Login to your account</a></p>
+                <input type="submit" name="submit" id="submit" value="Register" required />
+            </div>
         
-        <form method="POST" action="">
-            
-            <p>Register</p>
-            <p><?php echo $msg;?></p>
-            <p>First name: <input type="text" id="firstname" name="firstname" required /></p>
-            <p>Last name: <input type="text" id="lastname" name="lastname" required /></p>
-            <p>Email: <input type="email" id="email" name="email" required /></p>
-            <p>Password: <input type="password" id="password" name="password" required /></p>
-            <p><input type="submit" name="submit" id="submit" value="Register" required /></p>
-            
         </form>
         
     
