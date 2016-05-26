@@ -30,8 +30,8 @@ if(isset($_POST["submit"]))
             VALUES ('$firstname', '$lastname', '$email', '$password')");
 			if($query)
 			{
-				echo "Thank You! you are now registered.";
-                $msg = "Thank You! you are now registered.";
+				echo "Thank You! you are now registered. ";
+                $msg = "Thank You! you are now registered. <a href='index.php#2'>Login to your account</a>";
 			}
 		}
 	}
@@ -74,7 +74,9 @@ if(isset($_POST["submit"]))
             
         <h1>Register for Photoshot</h1>
             
-            <form action="checklogin.php" method="POST">
+            <p><?php echo $msg;?></p>
+            
+            <form method="POST" action="">
             <div id="flexform">
                 <label>First name: &nbsp; </label> <input type="text" id="firstname" name="firstname" required />
             </div>

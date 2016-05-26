@@ -42,8 +42,8 @@ include ("database.php");
         <img id="photo" alt="The Screen Capture will appear in this box"/>
         <canvas id="canvas"></canvas>
         <button id="takePhotoButton">Take Photo</button>
-        <button id="filterLeft"><</button>
-        <button id="filterRight">></button>
+        <button id="filterLeft"></button>
+        <button id="filterRight"></button>
     </section>
     <section id="loginModal">
       <div class="aboutContent">

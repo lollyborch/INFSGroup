@@ -63,7 +63,9 @@
       /* position */
       position: absolute;
       left: 43%; /* 50% - (width/2) */
-      top: 40%;
+      /*top: 40%;*/
+      top: 250px;
+      /*margin-top: 10%;*/
       width: 14%;
       /* display of children */
       display: flex;
@@ -124,23 +126,41 @@
 
     /* Camera Styling */
     .camera {
-      /* test */
+        /*previous
+      /* test 
       max-width: 1020px;
       width: 55%;
-      /* end test*/
+      /* end test
       display: none;
       position: relative;
       left: 450px;
       top: -825px;
       margin: 0px;
       border: 0px;
-      padding: 0px;
+      padding: 0px;*/
+        
+      max-width: 1020px;
+        width: 60%;
+        display: none;
+        position: relative;
+        left: 20%;
+        top: -50px;
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
     }
-
+    
     #takePhotoButton {
-      left: 50%;
-      top: 90%;
-      position: absolute;
+      left: 37%;
+    top: 91%;
+    position: absolute;
+    padding: 10px 50px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 1px;
+    float: left;
+    font-size: 30px;
     }
 
     #filterLeft, #filterRight {
@@ -391,6 +411,11 @@
 /* testing */
 #video, #photo {
   width:100%
+          
+}
+
+#photo {
+    margin-bottom: 85px;
 }
 
 .filter1 {
