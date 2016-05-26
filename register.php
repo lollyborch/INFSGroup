@@ -1,5 +1,6 @@
 <?php
 session_start();
+echo $_POST['email'].$_POST['password'];
 
 //registration form from http://www.eggslab.net/creating-registration-form-with-php-and-mysqli/
 
@@ -38,7 +39,7 @@ if(isset($_POST["submit"]))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Film Noir PhotoBooth</title>
+  <title>Register for PhotoBooth</title>
   <!-- Meta Information -->
   <meta charset="utf-8"/>
   <meta name="Author" content="Lyndon Moore, Sarah Balsillie, Lilly Borchardt"/>

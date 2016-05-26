@@ -1,5 +1,6 @@
 <?php
 	session_start();
+    echo $_POST['email'].$_POST['password'];
 
     session_destroy();
 

@@ -1,10 +1,15 @@
 @media screen{
 
     body {
-      background-color: black;
+      
       font-family: 'Roboto', Arial, sans-serif;
       font-weight: 300;
 
+    }
+    
+    html {
+      background: url(../images/hero2.jpg) no-repeat center center fixed; 
+      background-size: cover;
     }
 
     /* Stlying for Header and Footer */
@@ -93,7 +98,7 @@
 
 
     /* About Modal Styling */
-    #aboutModal {
+    #aboutModal, #loginModal {
       background-color:white;
       display: none;
       position: fixed;
@@ -144,6 +149,42 @@
 
     #filterLeft {
       left: 2%;
+    }
+    
+    .loginbox {
+        background-color: white; 
+        color: black; 
+        margin: 100px;
+        padding: 25px 50px 50px ;
+    }
+    
+    #flexform {
+        display:flex;
+        padding-bottom: 20px;
+    }
+    
+    input {
+      flex: 1;
+    }
+    
+    label, input {
+        font-size: 22px;
+    }
+    
+    input[type=submit] {
+    padding:10px 50px; 
+    background:#ccc; 
+    border: none;
+    border-radius: 1px; 
+    float: left;
+    }
+    
+    .registerText {
+        float: right;
+    }
+    
+    .bodybackground {
+        background-image: 'images/hero2.jpg';
     }
 }
 
