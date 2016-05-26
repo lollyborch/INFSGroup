@@ -17,6 +17,11 @@ include ("database.php");
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/main.css"/>
   <link href='https://fonts.googleapis.com/css?family=Roboto:500,300' rel='stylesheet' type='text/css'>
+    
+    <!--Social media sharing from http://www.sharethis.com/ -->
+    <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "bf70e5df-bbc2-489d-b572-e29842752e2a", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 </head>
 <body>
     <header>
@@ -87,6 +92,10 @@ include ("database.php");
             <li><a class="soc-twitter" href="https://twitter.com/?lang=en"></a></li>
             <li><a class="soc-instagram soc-icon-last" href="https://www.instagram.com/?hl=en"></a></li>
         </ul>
+        
+        <span class='st_facebook_large' displayText='Facebook'></span>
+<span class='st_twitter_large' displayText='Tweet'></span>
+<span class='st_email_large' displayText='Email'></span>
        
       <p>Copyright &copy; 2016</p>
     </footer>
