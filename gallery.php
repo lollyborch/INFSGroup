@@ -1,6 +1,8 @@
 <?php
 session_start();
 include ("database.php");
+$msg1 = '';
+$msg2 = '';
 
 //echo $_SESSION['firstname'];
 $hello = $_SESSION['firstname'];
