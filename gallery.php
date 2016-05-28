@@ -1,14 +1,11 @@
 <?php
 session_start();
 include ("database.php");
-$msg1 = '';
-$msg2 = '';
 
-//echo $_SESSION['firstname'];
+$userID = $_SESSION['userID'];
 $hello = $_SESSION['firstname'];
-//sets gallery variable to display none as default
-$gallery = "<li style='display:none'><a href='gallery.php'>Gallery</a></li>";
-
+//echo($_SESSION['uuserID']);
+//$userID = $_SESSION['userID'];
 
 if (isset($_SESSION['firstname']))
 {
@@ -21,12 +18,6 @@ if (isset($_SESSION['firstname']))
       }
 
 }
-else
-    {
-        //if you are not logged in show a link to login or register
-       $account = "<a id='loginButton' href='#2'>Login/Register</a>";
-       //$account = "hello2";
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,6 +57,11 @@ else
     <!--END NAVIGATION-->
 
     <section class="hero">
+      <?php
+        $result = mysqli_query($db, "SELECT `img_name` FROM `images` WHERE `user_ID` = 1;");
+        $test = sizeof($result);
+        echo("<p>$test</p>");
+       ?>
       <!--<img class="callToAction" src="images/hero2.jpg" alt="Shady character holding whisky glass"/>-->
     </section>
 

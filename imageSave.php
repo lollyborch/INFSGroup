@@ -20,14 +20,13 @@ if(isset( $_SESSION['firstname'])) {
   list($meta, $content) = explode(',', $dataUrl);
 
   $content = base64_decode($content);
-  if (!file_exists($filepath)) {
+  if (!file_exists($dirpath)) {
     mkdir("$dirpath");
   }
   file_put_contents($filepath, $content);
 
   if (mysqli_query($db, "INSERT INTO `images`(`img_ID`, `user_ID`, `img_name`) VALUES (0,'$userID','$filepath')")) {
     echo("IT WORKED");
-    //echo($_SESSION['userID']);
   };
 }
 ?>

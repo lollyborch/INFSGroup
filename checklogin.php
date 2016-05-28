@@ -1,33 +1,34 @@
-<?php 
+<?php
 session_start();
 //echo $_POST['email'].$_POST['password'];
 
 include ("database.php");
 
 if(isset($_POST["submit"]))
-	{   
+	{
 		$email = mysqli_real_escape_string($db, $_POST["email"]);
 		$password = mysqli_real_escape_string($db, $_POST["password"]);
     $password = md5($password);
-		
-		
+
+
 		$select_user="SELECT * FROM users WHERE email='$email' AND password='$password'";
-    
+
    // $query_user = mysqli_query($db,$select_user);
    // $check_user = mysqli_num_rows($run_user);
-    
+
 		$user_query=mysqli_query($db,$select_user);
         //$result_rows = mysqli_num_rows($result);
        // $resultarray = mysqli_fetch_array($result);
-    
+
         //from http://php.net/manual/en/mysqli-result.fetch-assoc.php
         if ($result = mysqli_query($db, $select_user)) {
 
             /* fetch associative array */
-            while ($row = mysqli_fetch_assoc($result)) {
-                $_SESSION['firstname'] = $row["firstname"];
-                //printf ("%s (%s)\n", $row["firstname"], $row["lastname"]);
-            }
+            $row = mysqli_fetch_assoc($result);
+            $_SESSION['firstname'] = $row["firstname"];
+						$_SESSION['userID'] = $row["user_ID"];
+            printf ("%s (%s)\n", $row["user_ID"], $row["lastname"]);
+
 
             /* free result set */
             mysqli_free_result($result);
@@ -36,8 +37,8 @@ if(isset($_POST["submit"]))
         /* close connection */
         mysqli_close($link);
         //echo $_SESSION['firstname'];
-    
-    
+
+
 		if(mysqli_num_rows($user_query)>0)
 		{
 			$_SESSION['email']=$email;
@@ -46,7 +47,7 @@ if(isset($_POST["submit"]))
             //echo count($resultarray);
             /*for (i=0; i<count($resultarray); i++){
                 $slice = array_slice($resultarray, i);
-                echo 
+                echo
             }*/
             //echo array_values($resultarray);
             header('location: index.php');
