@@ -1,6 +1,8 @@
 <?php
 session_start();
 include ("database.php");
+$msg1 = '';
+$msg2 = '';
 
 //echo $_SESSION['firstname'];
 $hello = $_SESSION['firstname'];
@@ -49,7 +51,7 @@ else
 <script type="text/javascript">stLight.options({publisher: "bf70e5df-bbc2-489d-b572-e29842752e2a", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 </head>
 <body>
-    <!--NAVIGATION-->
+<!--NAVIGATION-->
     <header>
       <nav>
         <ul>
@@ -61,8 +63,8 @@ else
           <p class="hellologout"><?php echo $account;?></p>
       </nav>
     </header>
-    <!--END NAVIGATION-->
-
+<!--END NAVIGATION-->
+<!--Camera button and video stream-->
     <section class="hero">
       <a  id="openCameraButton" class="callToActionButton" role="button" tabindex="0">
         <i class="fa fa-2x fa-camera-retro" aria-hidden="true"></i>
