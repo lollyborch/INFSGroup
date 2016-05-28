@@ -13,13 +13,14 @@ if (isset($_SESSION['firstname']))
       if (!empty($_SESSION['firstname']))
       {
           $account = "Hello ". $hello . ".  <a href='logout.php'>Logout</a>";
+          $gallery = "Gallery";
           //$account = "hello";
       }
     
 }
 else 
     {
-       $account = "<a id='loginButton' href=#2>Login</a>";
+       $account = "<a id='loginButton' href='#2'>Login/Register</a>";
        //$account = "hello2"; 
     }
 ?>
@@ -46,14 +47,14 @@ else
 <script type="text/javascript">stLight.options({publisher: "bf70e5df-bbc2-489d-b572-e29842752e2a", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 </head>
 <body>
-    
+    <!--NAVIGATION-->
     <header>
       <nav>
         <ul>
           <li><a href="index.php">Home</a></li>
           <li><a id="aboutButton" href=#1 >About</a></li>
-          <li><a id="loginButton" href=#2>Login/Register</a></li>
-            <li><a id="logoutButton" href=logout.php>Logout</a></li>
+            <li><a href="gallery.php"><?php echo $gallery;?> </a></li>
+           
         </ul>
           <p class="hellologout"><?php echo $account;?></p>
       </nav>
