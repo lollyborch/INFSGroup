@@ -29,7 +29,7 @@ include ("database.php");
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a id="aboutButton" href=#1 >About</a></li>
-          <li><a id="loginButton" href=#2>Login</a></li>
+          <li><a id="loginButton" href=#2>Login/Register</a></li>
             <li><a id="logoutButton" href=logout.php>Logout</a></li>
         </ul>
       </nav>
@@ -56,6 +56,7 @@ include ("database.php");
       <div class="loginleft">
         <p id="closeLogin">X</p>
         <h1>Login to Photoshot</h1>
+          <p><?php echo $msg1;?></p>
 
         <?php
         // checks is 'error' variable has been set
@@ -83,7 +84,7 @@ include ("database.php");
     <div class="registerright">
          <h1>Register for Photoshot</h1>
 
-            <p><?php echo $msg;?></p>
+            <p><?php echo $msg2;?></p>
 
             <form method="POST" action="registermodal.php">
             <div id="flexform">

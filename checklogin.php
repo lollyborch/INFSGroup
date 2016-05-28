@@ -1,6 +1,6 @@
 <?php 
 session_start();
-echo $_POST['email'].$_POST['password'];
+//echo $_POST['email'].$_POST['password'];
 
 include ("database.php");
 
@@ -23,7 +23,6 @@ if(isset($_POST["submit"]))
 			$_SESSION['email']=$email;
             $_SESSION['auth'] = true;
 			$_SESSION['error']="";
-			$_SESSION['username'] = $_POST['username'];
             header('location: index.php');
             exit;
             //echo "email is on!";
@@ -32,7 +31,7 @@ if(isset($_POST["submit"]))
 		{
             $_SESSION['error'] = "error Username or Password!!";
 			echo "nope-ity nope nope email password wrongs";
-            $msg = "The email or password entered was incorrect.  Please try again.";
+            $msg1 = "The email or password entered was incorrect.  Please try again.";
 		}
 	}
 ?>
