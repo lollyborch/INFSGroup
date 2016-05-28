@@ -11,7 +11,7 @@
       die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
      }
 
- echo "<div'>Connected successfully.</div>";
+ //echo "<div'>Connected successfully.</div>";
 
 // $mysqli->close();
 
