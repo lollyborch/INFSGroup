@@ -50,8 +50,9 @@ function configStream() {
       height = video.videoHeight / (video.videoWidth/width);
 
       console.log(video.width);
-      video.setAttribute("width",width);
-      video.setAttribute("height",height);
+        //have commented out video set height and width so can control responsiveness with CSS
+      //video.setAttribute("width",width);
+     // video.setAttribute("height",height);
       canvas.setAttribute("width",width);
       canvas.setAttribute("height",height);
       console.log(video.width);
