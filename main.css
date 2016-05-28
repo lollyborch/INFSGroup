@@ -282,3 +282,13 @@
 .soc-instagram:before {
     content:'x';
 }
+
+
+/* Tacced on at the end to make responsive later */
+.galleryContainer {
+  width: 30%;
+}
+
+.galleryImg {
+  width: 100%;
+}

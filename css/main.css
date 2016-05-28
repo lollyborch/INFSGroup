@@ -1,5 +1,18 @@
 @media screen{
 
+  /* Tacced on at the end to make responsive later */
+  .galleryContainer {
+    width: 25%;
+    padding: 1%;
+    position: relative;
+    left: 10%;
+    display: inline-block;
+  }
+
+  .galleryImg {
+    width: 100%;
+  }
+
     body {
 
       font-family: 'Roboto', Arial, sans-serif;
@@ -11,7 +24,7 @@
       background: url(../images/hero2.jpg) no-repeat center center fixed;
       background-size: cover;
     }
-    
+
     html, body {
     height: 100%;
     margin: 0;
@@ -84,7 +97,7 @@
     min-height: -moz-calc(100% - 100px);     /* Firefox */
     min-height: calc(100% - 100px);     /* native */
     }
-    
+
     footer {
         /*position: absolute;
         bottom: 0;*/
@@ -149,7 +162,7 @@
         float: right;
 
     }
-    
+
     .hellologout {
         color: white;
     float: right;
@@ -157,7 +170,7 @@
     margin-top: -35px;
     margin-right: 25px;
     }
-    
+
     .hellologout a{
         color: white;
         text-decoration: underline;
@@ -202,7 +215,7 @@
     float: left;
     font-size: 22px;
     }
-    
+
     .buttons-left{
         position: relative;
     clear: none;
@@ -210,7 +223,7 @@
     margin-left: 12%;
         margin-top: 1%;
     }
-    
+
     .buttons-right{
         position: relative;
     clear: none;
@@ -218,7 +231,7 @@
     margin-right: -9%;
     margin-top: 1%;
     }
-    
+
     .filterbuttons {
     margin-top: -10%;
 }
@@ -237,11 +250,11 @@
       /*left: 2%;
       margin-left: -65%;*/
     }
-    
+
     #emailButton {
          /* left: -75%; */
     }
-    
+
    /* #video {
     max-height: 450px;
     width:100%
@@ -317,7 +330,7 @@
     .callToAction {
         margin-top: 5%;
     }
-    
+
     .camera {
         left:15%;
     }
@@ -342,7 +355,7 @@
     .callToAction {
         margin-top: 7%;
     }
-    
+
     .camera {
         left:5%;
     }
@@ -354,26 +367,26 @@
     .callToActionButton {
         font-size: 22px;
     }
-    
+
     nav ul li {
     font-size: 18px;
     padding: 10px 10px;
     }
-    
+
     .hellologout {
     margin-top: -30px;
     font-size: 14px;
     }
-    
+
     #photo, #video {
     max-width: 500px;
         margin-left: 0;
 }
-    
+
     .buttons-left{
     margin-left: 1%
     }
-    
+
     nav ul {
         justify-content: initial;
         margin-left: 11%;
@@ -386,8 +399,8 @@
     .callToActionButton {
         font-size: 22px;
     }
-    
-    
+
+
 
 }
 
@@ -419,13 +432,13 @@
     width: 130%;
     padding-left: 0;
 }
-    
+
 @media only screen and (max-width:600px){
 
 
    #photo, #video {
     max-width: 400px;
-} 
+}
 
 }
 
@@ -458,16 +471,16 @@
     margin-left: -45%;
     margin-top: 13%;
     }
-    
+
     .hellologout {
     margin-top: 0px;
         float: left;
     margin-left: 13%;
     }
-    
+
     #photo, #video {
     max-width: 350px;
-} 
+}
 
 }
 

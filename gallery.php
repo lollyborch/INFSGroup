@@ -58,9 +58,16 @@ if (isset($_SESSION['firstname']))
 
     <section class="hero">
       <?php
-        $result = mysqli_query($db, "SELECT `img_name` FROM `images` WHERE `user_ID` = 1;");
-        $test = sizeof($result);
-        echo("<p>$test</p>");
+        $result = mysqli_query($db, "SELECT `img_name` FROM `images` WHERE `user_ID` = $userID");
+        $fetchresult = mysqli_fetch_all($result);
+        foreach ($fetchresult as $row) {
+          $result = $row;
+          foreach($result as $value) {
+            $formatstring = substr($value,15);
+            $image = "<div class='galleryContainer'><img class='galleryImg' src=$formatstring /></div>";
+            echo($image);
+          }
+        }
        ?>
       <!--<img class="callToAction" src="images/hero2.jpg" alt="Shady character holding whisky glass"/>-->
     </section>
