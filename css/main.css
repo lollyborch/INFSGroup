@@ -11,6 +11,11 @@
       background: url(../images/hero2.jpg) no-repeat center center fixed;
       background-size: cover;
     }
+    
+    html, body {
+    height: 100%;
+    margin: 0;
+}
 
     /* Stlying for Header and Footer */
     nav ul, footer ul {
@@ -73,21 +78,29 @@
       align-items: center;
 
     }
-
+    .bodycontainer {
+        padding: 10px;
+    min-height: -webkit-calc(100% - 100px);     /* Chrome */
+    min-height: -moz-calc(100% - 100px);     /* Firefox */
+    min-height: calc(100% - 100px);     /* native */
+    }
+    
     footer {
-        position: absolute;
-        bottom: 0;
+        /*position: absolute;
+        bottom: 0;*/
         width: 100%;
-        margin-bottom: 10px;
-        padding-top: 10px;
+        margin-top: -20px;
+        padding: 0px;
         background-color: rgba(0,0,0,0.7);
+        clear:both;
+        position: relative;
     }
 
     /* Stlying for Footer */
     footer p {
       float: right;
       color: grey;
-      margin: -25px 20px;
+      margin: -35px 20px;
     }
 
     footer ul li {
@@ -165,11 +178,12 @@
       border: 0px;
       padding: 0px;*/
 
-      max-width: 1020px;
+      /*max-width: 1020px;*/
         width: 60%;
         display: none;
         position: relative;
         left: 20%;
+        min-height: 570px;
         /*top: -50px;*/
         margin: 0px;
         border: 0px;
@@ -177,33 +191,74 @@
     }
 
     #takePhotoButton {
-      left: 37%;
-    top: 91%;
-    position: absolute;
-    padding: 10px 50px;
+    /*  left: 37%;
+    top: 95%;*/
+    position: relative;
+    padding: 5px 50px;
     background: red;
     color: white;
     border: none;
     border-radius: 1px;
     float: left;
-    font-size: 30px;
+    font-size: 22px;
     }
+    
+    .buttons-left{
+        position: relative;
+    clear: none;
+    float: left;
+    margin-left: 12%;
+        margin-top: 1%;
+    }
+    
+    .buttons-right{
+        position: relative;
+    clear: none;
+    float: right;
+    margin-left: 12%;
+    margin-top: 1%;
+    }
+    
+    .filterbuttons {
+    margin-top: -10%;
+}
 
     #filterLeft, #filterRight, #emailButton {
       display: none;
-      position: absolute;
+     /* position: absolute;
       top: 90%;
       left: 5%;
-      color: red;
+      color: red;*/
+    color: red;
+    position: relative;
     }
 
     #filterLeft {
-      left: 2%;
+      /*left: 2%;*/
+      margin-left: -65%;
     }
-
+    
     #emailButton {
-      left: 10%;
+          left: -75%;
     }
+    
+   /* #video {
+    max-height: 450px;
+    width:100%
+}*/
+
+#photo, #video {
+    /*margin-bottom: 85px;*/
+    max-height: 450px;
+    width: auto;
+    margin-left: 10%;
+}
+
+
+.filter1 {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
 
     .loginbox {
         background-color: white;
@@ -438,18 +493,6 @@
     content:'x';
 }
 
-
-/* testing */
-#video, #photo {
-  width:100%
-
-}
-
-#photo {
-    margin-bottom: 85px;
-}
-
-.filter1 {
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
+.soc-google:before {
+    content:'c';
 }
