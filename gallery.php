@@ -19,13 +19,13 @@ if (isset($_SESSION['firstname']))
           //shows link to gallery if you are logged in
           $gallery = "<li><a href='gallery.php'>Gallery</a></li>";
       }
-    
+
 }
-else 
+else
     {
         //if you are not logged in show a link to login or register
        $account = "<a id='loginButton' href='#2'>Login/Register</a>";
-       //$account = "hello2"; 
+       //$account = "hello2";
     }
 ?>
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ else
           <li><a href="index.php">Home</a></li>
           <li><a id="aboutButton" href=#1 >About</a></li>
           <?php echo $gallery; ?>
-           
+
         </ul>
           <p class="hellologout"><?php echo $account;?></p>
       </nav>

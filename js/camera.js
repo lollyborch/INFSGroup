@@ -119,7 +119,11 @@ function captureImage() {
     canvas.height = height;
     context.drawImage(video,0,0,width,height);
 
-    var data = canvas.toDataURL("image/png");
+    var data = canvas.toDataURL("Base64");
+    //var dataF = data.slice(22,data.length);
+    //var decoded = window.atob(dataF);
+    postImage(data);
+
     photo.setAttribute("src",data);
     photo.style.display = "inline-block";
     video.style.display = "none";
@@ -137,6 +141,14 @@ function captureImage() {
 
   }
 };
+
+function postImage(data) {
+  var xhttp = new XMLHttpRequest();
+  console.log(xhttp);
+  xhttp.open("POST","imageSave.php", true,'root','');
+  xhttp.send(data);
+  }
+  console.log("trying to post shit");
 
 function changeFilter(x) {
   if (x.target.id == "filterRight") {
