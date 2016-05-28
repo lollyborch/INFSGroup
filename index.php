@@ -30,7 +30,7 @@ include ("database.php");
     <header>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li><a id="aboutButton" href=#1 >About</a></li>
           <li><a id="loginButton" href=#2>Login/Register</a></li>
             <li><a id="logoutButton" href=logout.php>Logout</a></li>
