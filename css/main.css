@@ -1,14 +1,14 @@
 @media screen{
 
     body {
-      
+
       font-family: 'Roboto', Arial, sans-serif;
       font-weight: 300;
 
     }
-    
+
     html {
-      background: url(../images/hero2.jpg) no-repeat center center fixed; 
+      background: url(../images/hero2.jpg) no-repeat center center fixed;
       background-size: cover;
     }
 
@@ -122,25 +122,25 @@
         cursor: pointer;
         font-size: 30px;
     }
-    
+
     .loginleft {
        width: 45%;
        margin-right: 10px;
-        float: left;    
-        
+        float: left;
+
     }
-    
+
     .registerright {
         width: 45%;
        margin-left: 10px;
-        float: right; 
-        
+        float: right;
+
     }
 
     /* Camera Styling */
     .camera {
         /*previous
-      /* test 
+      /* test
       max-width: 1020px;
       width: 55%;
       /* end test
@@ -151,7 +151,7 @@
       margin: 0px;
       border: 0px;
       padding: 0px;*/
-        
+
       max-width: 1020px;
         width: 60%;
         display: none;
@@ -162,7 +162,7 @@
         border: 0px;
         padding: 0px;
     }
-    
+
     #takePhotoButton {
       left: 37%;
     top: 91%;
@@ -176,49 +176,54 @@
     font-size: 30px;
     }
 
-    #filterLeft, #filterRight {
+    #filterLeft, #filterRight, #emailButton {
       display: none;
       position: absolute;
       top: 90%;
       left: 5%;
+      color: red;
     }
 
     #filterLeft {
       left: 2%;
     }
-    
+
+    #emailButton {
+      left: 10%;
+    }
+
     .loginbox {
-        background-color: white; 
-        color: black; 
+        background-color: white;
+        color: black;
         margin: 100px;
         padding: 25px 50px 50px ;
     }
-    
+
     #flexform {
         display:flex;
         padding-bottom: 20px;
     }
-    
+
     input {
       flex: 1;
     }
-    
+
     label, input {
         font-size: 22px;
     }
-    
+
     input[type=submit] {
-    padding:10px 50px; 
-    background:#ccc; 
+    padding:10px 50px;
+    background:#ccc;
     border: none;
-    border-radius: 1px; 
+    border-radius: 1px;
     float: left;
     }
-    
+
     .registerText {
         float: right;
     }
-    
+
     .bodybackground {
         background-image: 'images/hero2.jpg';
     }
@@ -424,7 +429,7 @@
 /* testing */
 #video, #photo {
   width:100%
-          
+
 }
 
 #photo {

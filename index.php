@@ -18,6 +18,9 @@ include ("database.php");
   <link rel="stylesheet" type="text/css" href="css/main.css"/>
   <link href='https://fonts.googleapis.com/css?family=Roboto:500,300' rel='stylesheet' type='text/css'>
 
+  <!-- Font awesome -->
+  <script src="https://use.fontawesome.com/049fef273f.js"></script>
+
     <!--Social media sharing from http://www.sharethis.com/ -->
     <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
@@ -47,8 +50,9 @@ include ("database.php");
         <img id="photo" alt="The Screen Capture will appear in this box"/>
         <canvas id="canvas"></canvas>
         <button id="takePhotoButton">Take Photo</button>
-        <button id="filterLeft"></button>
-        <button id="filterRight"></button>
+        <i id="filterLeft" class="fa fa-chevron-left" aria-hidden="true"></i>
+        <i id="filterRight" class="fa fa-chevron-right" aria-hidden="true"></i>
+        <button id="emailButton">Email to Friend</button>
     </section>
 
     <!-- Login Modal content -->

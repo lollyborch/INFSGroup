@@ -31,6 +31,7 @@ function assignElements() {
   filterLeft.addEventListener("click", changeFilter);
   filterRight = document.getElementById("filterRight");
   filterRight.addEventListener("click", changeFilter);
+  emailButton = document.getElementById("emailButton");
 };
 
 // Open Camera Application
@@ -113,6 +114,7 @@ function captureImage() {
     takePhotoButton.innerHTML = "Retake Photo";
     filterLeft.style.display = "inline-block";
     filterRight.style.display = "inline-block";
+    emailButton.style.display = "inline-block";
     canvas.width = width;
     canvas.height = height;
     context.drawImage(video,0,0,width,height);
@@ -131,6 +133,8 @@ function captureImage() {
     video.style.display = "inline-block";
     filterLeft.style.display = "none";
     filterRight.style.display = "none";
+    emailButton.style.display = "none";
+
   }
 };
 
