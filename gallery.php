@@ -1,8 +1,30 @@
 <?php
 session_start();
-echo $_POST['email'].$_POST['password'];
-
 include ("database.php");
+
+//echo $_SESSION['firstname'];
+$hello = $_SESSION['firstname'];
+//sets gallery variable to display none as default
+$gallery = "<li style='display:none'><a href='gallery.php'>Gallery</a></li>";
+
+
+if (isset($_SESSION['firstname']))
+{
+      if (!empty($_SESSION['firstname']))
+      {
+          //if you are logged in, shows a hello message and a link to logout through the $hello variable
+          $account = "Hello ". $hello . ".  <a href='logout.php'>Logout</a>";
+          //shows link to gallery if you are logged in
+          $gallery = "<li><a href='gallery.php'>Gallery</a></li>";
+      }
+    
+}
+else 
+    {
+        //if you are not logged in show a link to login or register
+       $account = "<a id='loginButton' href='#2'>Login/Register</a>";
+       //$account = "hello2"; 
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,16 +49,19 @@ include ("database.php");
 <script type="text/javascript">stLight.options({publisher: "bf70e5df-bbc2-489d-b572-e29842752e2a", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 </head>
 <body>
+    <!--NAVIGATION-->
     <header>
       <nav>
         <ul>
           <li><a href="index.php">Home</a></li>
           <li><a id="aboutButton" href=#1 >About</a></li>
-          <li><a id="loginButton" href=#2>Login/Register</a></li>
-            <li><a id="logoutButton" href=logout.php>Logout</a></li>
+          <?php echo $gallery; ?>
+           
         </ul>
+          <p class="hellologout"><?php echo $account;?></p>
       </nav>
     </header>
+    <!--END NAVIGATION-->
 
     <section class="hero">
       <!--<img class="callToAction" src="images/hero2.jpg" alt="Shady character holding whisky glass"/>-->

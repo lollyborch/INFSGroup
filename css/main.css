@@ -144,6 +144,11 @@
     margin-top: -35px;
     margin-right: 25px;
     }
+    
+    .hellologout a{
+        color: white;
+        text-decoration: underline;
+    }
 
     /* Camera Styling */
     .camera {

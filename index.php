@@ -1,25 +1,27 @@
 <?php
 session_start();
-//echo $_POST['email'].$_POST['password'];
 include ("database.php");
 
-echo $_SESSION['firstname'];
+//echo $_SESSION['firstname'];
 $hello = $_SESSION['firstname'];
+//sets gallery variable to display none as default
+$gallery = "<li style='display:none'><a href='gallery.php'>Gallery</a></li>";
 
-//$_SESSION['image']
 
 if (isset($_SESSION['firstname']))
 {
       if (!empty($_SESSION['firstname']))
       {
+          //if you are logged in, shows a hello message and a link to logout through the $hello variable
           $account = "Hello ". $hello . ".  <a href='logout.php'>Logout</a>";
-          $gallery = "Gallery";
-          //$account = "hello";
+          //shows link to gallery if you are logged in
+          $gallery = "<li><a href='gallery.php'>Gallery</a></li>";
       }
     
 }
 else 
     {
+        //if you are not logged in show a link to login or register
        $account = "<a id='loginButton' href='#2'>Login/Register</a>";
        //$account = "hello2"; 
     }
@@ -53,12 +55,13 @@ else
         <ul>
           <li><a href="index.php">Home</a></li>
           <li><a id="aboutButton" href=#1 >About</a></li>
-            <li><a href="gallery.php"><?php echo $gallery;?> </a></li>
+          <?php echo $gallery; ?>
            
         </ul>
           <p class="hellologout"><?php echo $account;?></p>
       </nav>
     </header>
+    <!--END NAVIGATION-->
 
     <section class="hero">
       <a  id="openCameraButton" class="callToActionButton" role="button" tabindex="0">
@@ -109,7 +112,7 @@ else
     <div class="registerright">
          <h1>Register for Photoshot</h1>
 
-            <p><?php echo $msg2;?></p>
+            <p><?php echo $msg2; ?></p>
 
             <form method="POST" action="registermodal.php">
             <div id="flexform">
