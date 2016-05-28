@@ -45,10 +45,6 @@ else
   <!-- Font awesome -->
   <script src="https://use.fontawesome.com/049fef273f.js"></script>
 
-    <!--Social media sharing from http://www.sharethis.com/ -->
-    <script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "bf70e5df-bbc2-489d-b572-e29842752e2a", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 </head>
 <body>
 <!--NAVIGATION-->
@@ -64,6 +60,8 @@ else
       </nav>
     </header>
 <!--END NAVIGATION-->
+<!--Start Body container-->  
+    <div class="bodycontainer">
 <!--Camera button and video stream-->
     <section class="hero">
       <a  id="openCameraButton" class="callToActionButton" role="button" tabindex="0">
@@ -76,10 +74,14 @@ else
         <video id="video">Video Stream not Available</video>
         <img id="photo" alt="The Screen Capture will appear in this box"/>
         <canvas id="canvas"></canvas>
-        <button id="takePhotoButton">Take Photo</button>
-        <i id="filterLeft" class="fa fa-chevron-left" aria-hidden="true"></i>
-        <i id="filterRight" class="fa fa-chevron-right" aria-hidden="true"></i>
-        <button id="emailButton">Email to Friend</button>
+        <div class="buttons-left">
+            <button id="takePhotoButton">Take Photo</button>
+        </div>
+        <div class="buttons-right">
+            <button id="emailButton">Email to Friend</button>
+            <i id="filterLeft" class="fa fa-chevron-left" aria-hidden="true"></i>
+            <i id="filterRight" class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
     </section>
 
     <!-- Login Modal content -->
@@ -143,20 +145,20 @@ else
         <p>About the project</p>
       </div>
     </section>
+<!--End Body container-->
+    </div>
+<!-- FOOTER START -->
     <footer>
 
+        <!-- Share links generated at http://www.sharelinkgenerator.com/ -->
         <ul class="soc">
-            <li><a class="soc-facebook" href="https://www.facebook.com/"></a></li>
-            <li><a class="soc-twitter" href="https://twitter.com/?lang=en"></a></li>
-            <li><a class="soc-instagram soc-icon-last" href="https://www.instagram.com/?hl=en"></a></li>
+            <li><a class="soc-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//infs3202photobooth.azurewebsites.net/" target="_blank"></a></li>
+            <li><a class="soc-twitter" href="https://twitter.com/home?status=Take%20a%20photo%20with%20Photo%20Shot%20http%3A//infs3202photobooth.azurewebsites.net/" target="_blank"></a></li>
+            <li><a class="soc-google soc-icon-last" href="https://plus.google.com/share?url=http%3A//infs3202photobooth.azurewebsites.net/" target="_blank"></a></li>
         </ul>
-
-        <span class='st_facebook_large' displayText='Facebook'></span>
-<span class='st_twitter_large' displayText='Tweet'></span>
-<span class='st_email_large' displayText='Email'></span>
-
       <p>Copyright &copy; 2016</p>
     </footer>
+<!-- FOOTER END -->
     <script src="js\modal.js"></script>
     <script src="js\camera.js"></script>
 </body>
