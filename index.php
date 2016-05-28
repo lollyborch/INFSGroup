@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 echo $_POST['email'].$_POST['password'];
 
@@ -17,7 +17,7 @@ include ("database.php");
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/main.css"/>
   <link href='https://fonts.googleapis.com/css?family=Roboto:500,300' rel='stylesheet' type='text/css'>
-    
+
     <!--Social media sharing from http://www.sharethis.com/ -->
     <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
@@ -34,7 +34,7 @@ include ("database.php");
         </ul>
       </nav>
     </header>
-    
+
     <section class="hero">
       <a  id="openCameraButton" class="callToActionButton" role="button" tabindex="0">
         <i class="fa fa-2x fa-camera-retro" aria-hidden="true"></i>
@@ -50,21 +50,21 @@ include ("database.php");
         <button id="filterLeft"></button>
         <button id="filterRight"></button>
     </section>
-    
+
     <!-- Login Modal content -->
     <section id="loginModal">
       <div class="loginleft">
         <p id="closeLogin">X</p>
         <h1>Login to Photoshot</h1>
-        
+
         <?php
         // checks is 'error' variable has been set
          if (isset($_SESSION['error'])) {
              echo "<div>".$_SESSION['error']."</div>";
          }
-   
+
         ?>
-        
+
         <form action="checklogin.php" method="POST">
             <div id="flexform">
                 <label>Email: &nbsp; </label> <input type="email" id="email" name="email" required />
@@ -76,15 +76,15 @@ include ("database.php");
                 <p class="registerText"><a href="register.php">Register for an account</a></p>
                 <input type="submit" name="submit" id="submit" value="Login" />
             </div>
-        
+
         </form>
 
       </div>
     <div class="registerright">
          <h1>Register for Photoshot</h1>
-            
+
             <p><?php echo $msg;?></p>
-            
+
             <form method="POST" action="registermodal.php">
             <div id="flexform">
                 <label>First name: &nbsp; </label> <input type="text" id="firstname" name="firstname" required />
@@ -102,7 +102,7 @@ include ("database.php");
                 <p class="registerText"><a href="index.php#2">Login to your account</a></p>
                 <input type="submit" name="submit" id="submit" value="Register" required />
             </div>
-        
+
         </form>
     </div>
     </section>
@@ -120,11 +120,11 @@ include ("database.php");
             <li><a class="soc-twitter" href="https://twitter.com/?lang=en"></a></li>
             <li><a class="soc-instagram soc-icon-last" href="https://www.instagram.com/?hl=en"></a></li>
         </ul>
-        
+
         <span class='st_facebook_large' displayText='Facebook'></span>
 <span class='st_twitter_large' displayText='Tweet'></span>
 <span class='st_email_large' displayText='Email'></span>
-       
+
       <p>Copyright &copy; 2016</p>
     </footer>
     <script src="js\modal.js"></script>

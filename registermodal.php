@@ -14,8 +14,8 @@ if(isset($_POST["submit"]))
 		$email = mysqli_real_escape_string($db, $_POST["email"]);
 		$password = mysqli_real_escape_string($db, $_POST["password"]);
 		$password = md5($password);
-		
-		
+
+
 		$sql="SELECT email FROM users WHERE email='$email'";
 		$result=mysqli_query($db,$sql);
 		$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
@@ -30,9 +30,7 @@ if(isset($_POST["submit"]))
             VALUES ('$firstname', '$lastname', '$email', '$password')");
 			if($query)
 			{
-				echo "Thank You! you are now registered. ";
-                $msg = "Thank You! you are now registered. <a href='index.php#2'>Login to your account</a>";
-			}
+				header('Location: index.php');
 		}
 	}
 ?>
