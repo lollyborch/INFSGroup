@@ -215,7 +215,7 @@
         position: relative;
     clear: none;
     float: right;
-    margin-left: 12%;
+    margin-right: -18%;
     margin-top: 1%;
     }
     
@@ -234,12 +234,12 @@
     }
 
     #filterLeft {
-      /*left: 2%;*/
-      margin-left: -65%;
+      /*left: 2%;
+      margin-left: -65%;*/
     }
     
     #emailButton {
-          left: -75%;
+         /* left: -75%; */
     }
     
    /* #video {
@@ -317,6 +317,17 @@
     .callToAction {
         margin-top: 5%;
     }
+    
+    .camera {
+        left:15%;
+    }
+}
+
+@media only screen and (max-width:900px){
+
+    .camera {
+        left:10%;
+    }
 
 }
 
@@ -331,6 +342,42 @@
     .callToAction {
         margin-top: 7%;
     }
+    
+    .camera {
+        left:5%;
+    }
+
+}
+
+@media only screen and (max-width:800px){
+
+    .callToActionButton {
+        font-size: 22px;
+    }
+    
+    nav ul li {
+    font-size: 18px;
+    padding: 10px 10px;
+    }
+    
+    .hellologout {
+    margin-top: -30px;
+    font-size: 14px;
+    }
+    
+    #photo, #video {
+    max-width: 500px;
+        margin-left: 0;
+}
+    
+    .buttons-left{
+    margin-left: 1%
+    }
+    
+    nav ul {
+        justify-content: initial;
+        margin-left: 11%;
+    }
 
 }
 
@@ -338,6 +385,17 @@
 
     .callToActionButton {
         font-size: 22px;
+    }
+    
+    
+
+}
+
+@media only screen and (max-width:650px){
+
+    .buttons-left, .buttons-right{
+    clear: both;
+    float: left;
     }
 
 }
@@ -361,6 +419,13 @@
     width: 130%;
     padding-left: 0;
 }
+    
+@media only screen and (max-width:600px){
+
+
+   #photo, #video {
+    max-width: 400px;
+} 
 
 }
 
@@ -393,10 +458,16 @@
     margin-left: -45%;
     margin-top: 13%;
     }
-
-    nav ul li {
-    padding: 10px 30px 10px;
+    
+    .hellologout {
+    margin-top: 0px;
+        float: left;
+    margin-left: 13%;
     }
+    
+    #photo, #video {
+    max-width: 350px;
+} 
 
 }
 
