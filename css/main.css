@@ -136,6 +136,14 @@
         float: right;
 
     }
+    
+    .hellologout {
+        color: white;
+    float: right;
+    clear: none;
+    margin-top: -35px;
+    margin-right: 25px;
+    }
 
     /* Camera Styling */
     .camera {

@@ -1,8 +1,27 @@
 <?php
 session_start();
-echo $_POST['email'].$_POST['password'];
-
+//echo $_POST['email'].$_POST['password'];
 include ("database.php");
+
+echo $_SESSION['firstname'];
+$hello = $_SESSION['firstname'];
+
+//$_SESSION['image']
+
+if (isset($_SESSION['firstname']))
+{
+      if (!empty($_SESSION['firstname']))
+      {
+          $account = "Hello ". $hello . ".  <a href='logout.php'>Logout</a>";
+          //$account = "hello";
+      }
+    
+}
+else 
+    {
+       $account = "<a id='loginButton' href=#2>Login</a>";
+       //$account = "hello2"; 
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +46,7 @@ include ("database.php");
 <script type="text/javascript">stLight.options({publisher: "bf70e5df-bbc2-489d-b572-e29842752e2a", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 </head>
 <body>
+    
     <header>
       <nav>
         <ul>
@@ -35,6 +55,7 @@ include ("database.php");
           <li><a id="loginButton" href=#2>Login/Register</a></li>
             <li><a id="logoutButton" href=logout.php>Logout</a></li>
         </ul>
+          <p class="hellologout"><?php echo $account;?></p>
       </nav>
     </header>
 
@@ -78,7 +99,6 @@ include ("database.php");
                 <label>Password: &nbsp; </label> <input type="password" id="password" name="password" required />
             </div>
             <div>
-                <p class="registerText"><a href="register.php">Register for an account</a></p>
                 <input type="submit" name="submit" id="submit" value="Login" />
             </div>
 
@@ -104,7 +124,6 @@ include ("database.php");
                 <label>Password: &nbsp; </label> <input type="password" id="password" name="password" required />
             </div>
             <div>
-                <p class="registerText"><a href="index.php#2">Login to your account</a></p>
                 <input type="submit" name="submit" id="submit" value="Register" required />
             </div>
 
