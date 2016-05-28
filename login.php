@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 echo $_POST['email'].$_POST['password'];
 
@@ -22,25 +22,25 @@ include ("database.php");
     <header>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li><a id="aboutButton" href=#1>About</a></li>
           <li><a id="loginButton" href=#2>Login</a></li>
             <li><a id="logoutButton" href=logout.php>Logout</a></li>
         </ul>
       </nav>
     </header>
-    
+
     <section class="loginbox">
         <h1>Login to Photoshot</h1>
-        
+
         <?php
         // checks is 'error' variable has been set
          if (isset($_SESSION['error'])) {
              echo "<div>".$_SESSION['error']."</div>";
          }
-   
+
         ?>
-        
+
         <form action="checklogin.php" method="POST">
             <div id="flexform">
                 <label>Email: &nbsp; </label> <input type="email" id="email" name="email" required />
@@ -52,12 +52,12 @@ include ("database.php");
                 <p class="registerText"><a href="register.php">Register for an account</a></p>
                 <input type="submit" name="submit" id="submit" value="Login" />
             </div>
-        
+
         </form>
 
     </section>
-    
-    
+
+
 
     <section id="aboutModal">
       <div class="aboutContent">

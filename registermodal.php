@@ -1,6 +1,6 @@
 <?php
 session_start();
-//echo $_POST['email'].$_POST['password'];
+echo $_POST['email'].$_POST['password'];
 
 //registration form from http://www.eggslab.net/creating-registration-form-with-php-and-mysqli/
 
@@ -21,8 +21,8 @@ if(isset($_POST["submit"]))
 		$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 		if(mysqli_num_rows($result) == 1)
 		{
-			//echo "Sorry...This email already exist...";
-            $msg2 = "Sorry...This email already exist...";
+			echo "Sorry...This email already exist...";
+            $msg = "Sorry...This email already exist...";
 		}
 		else
 		{
@@ -30,10 +30,9 @@ if(isset($_POST["submit"]))
             VALUES ('$firstname', '$lastname', '$email', '$password')");
 			if($query)
 			{
-                //echo "Thank You! you are now registered. ";
-                $msg2 = "Thank You! you are now registered.";
-			}
 				header('Location: index.php');
+				echo "Thank You! you are now registered. ";
+				$msg2 = "Thank You! you are now registered.";
 		}
 	}
 ?>
