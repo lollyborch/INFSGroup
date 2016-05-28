@@ -122,7 +122,20 @@
         cursor: pointer;
         font-size: 30px;
     }
-
+    
+    .loginleft {
+       width: 45%;
+       margin-right: 10px;
+        float: left;    
+        
+    }
+    
+    .registerright {
+        width: 45%;
+       margin-left: 10px;
+        float: right; 
+        
+    }
 
     /* Camera Styling */
     .camera {

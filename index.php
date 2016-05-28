@@ -28,7 +28,7 @@ include ("database.php");
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a id="aboutButton" href=#1>About</a></li>
+          <li><a id="aboutButton" href=#1 >About</a></li>
           <li><a id="loginButton" href=#2>Login</a></li>
             <li><a id="logoutButton" href=logout.php>Logout</a></li>
         </ul>
@@ -50,8 +50,10 @@ include ("database.php");
         <button id="filterLeft"></button>
         <button id="filterRight"></button>
     </section>
+    
+    <!-- Login Modal content -->
     <section id="loginModal">
-      <div class="aboutContent">
+      <div class="loginleft">
         <p id="closeLogin">X</p>
         <h1>Login to Photoshot</h1>
         
@@ -78,9 +80,35 @@ include ("database.php");
         </form>
 
       </div>
+    <div class="registerright">
+         <h1>Register for Photoshot</h1>
+            
+            <p><?php echo $msg;?></p>
+            
+            <form method="POST" action="registermodal.php">
+            <div id="flexform">
+                <label>First name: &nbsp; </label> <input type="text" id="firstname" name="firstname" required />
+            </div>
+            <div id="flexform">
+                <label>Last name: &nbsp; </label> <input type="text" id="lastname" name="lastname" required />
+            </div>
+            <div id="flexform">
+                <label>Email: &nbsp; </label> <input type="email" id="email" name="email" required />
+            </div>
+            <div id="flexform">
+                <label>Password: &nbsp; </label> <input type="password" id="password" name="password" required />
+            </div>
+            <div>
+                <p class="registerText"><a href="index.php#2">Login to your account</a></p>
+                <input type="submit" name="submit" id="submit" value="Register" required />
+            </div>
+        
+        </form>
+    </div>
     </section>
+    <!-- About Modal content -->
     <section id="aboutModal">
-      <div class="aboutContent">
+      <div >
         <p id="closeAbout">X</p>
         <p>About the project</p>
       </div>
