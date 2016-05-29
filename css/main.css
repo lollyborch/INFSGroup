@@ -142,7 +142,7 @@
 
     #closeAbout, #closeLogin {
         position: fixed;
-        left: 84%;
+        left: 83%;
         top: 18%;
         color: red;
         cursor: pointer;
@@ -317,6 +317,10 @@
         left: 41%;
         width: 18%;
     }
+
+    #closeAbout, #closeLogin {
+        left: 85%;
+    }
 }
 
 @media only screen and (max-width:995px){
@@ -333,6 +337,10 @@
 
     .camera {
         left:15%;
+    }
+
+    #closeAbout, #closeLogin {
+        left: 86%;
     }
 }
 
@@ -411,6 +419,9 @@
     float: left;
     }
 
+    #closeAbout, #closeLogin {
+        top: 18.5%;
+    }
 }
 
 @media only screen and (max-width:630px){
