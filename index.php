@@ -19,13 +19,13 @@ if (isset($_SESSION['firstname']))
           //shows link to gallery if you are logged in
           $gallery = "<li><a href='gallery.php'>Gallery</a></li>";
       }
-    
+
 }
-else 
+else
     {
         //if you are not logged in show a link to login or register
        $account = "<a id='loginButton' href='#2'>Login/Register</a>";
-       //$account = "hello2"; 
+       //$account = "hello2";
     }
 ?>
 <!DOCTYPE html>
@@ -54,13 +54,13 @@ else
           <li><a href="index.php">Home</a></li>
           <li><a id="aboutButton" href=#1 >About</a></li>
           <?php echo $gallery; ?>
-           
+
         </ul>
           <p class="hellologout"><?php echo $account;?></p>
       </nav>
     </header>
 <!--END NAVIGATION-->
-<!--Start Body container-->  
+<!--Start Body container-->
     <div class="bodycontainer">
 <!--Camera button and video stream-->
     <section class="hero">
@@ -142,7 +142,14 @@ else
     <section id="aboutModal">
       <div >
         <p id="closeAbout">X</p>
-        <p>About the project</p>
+        <p>
+          The Film Noir photobooth is designed to be a fun and playful image
+          capture website where users can save and add filters to photos they
+          take using their computers webcam. Different filters can be added to
+          the images to create various effects and the resulting images are saved
+          into the users gallery. Alternatively these images can be sent via
+          email to share with friends and family. 
+        </p>
       </div>
     </section>
 <!--End Body container-->
