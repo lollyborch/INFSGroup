@@ -1,13 +1,30 @@
+<!DOCTYPE html>
+<head>
+<title>Form submission</title>
+</head>
+<body>
+
+<form action="" method="post">
+First Name: <input type="text" name="first_name" id="first_name"><br>
+Last Name: <input type="text" name="last_name" id="last_name"><br>
+Email: <input type="text" name="email" id="email"><br>
+Message:<br><textarea rows="5" name="message" cols="30" email="message"></textarea><br>
+<input type="submit" name="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
 <?php 
 
-require_once('PHPMailer/class.phpmailer.php');
+require ('PHPMailer/PHPMailerAutoload.php');
 
-$email = $_REQUEST['email'];
-$message = $_REQUEST['message'];
+$email = $_POST['email'];
+$message = $_POST['message'];
 
 if(isset($_POST['submit'])){
 
-    $from = "person@email.com"; // your email
+    $from = "infsphotobooth@gmail.com"; // your email
     $to = $_POST['email']; 
     $subject = "Photobooth image";
     $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
@@ -17,18 +34,19 @@ if(isset($_POST['submit'])){
 	$mail = new PHPMailer();
 	
 	$mail->isHTML(true);
+	$mail->SMTPDebug = 4; // enables SMTP debug information 
 	$mail->IsSMTP();
 	$mail->SMTPAuth = true;
 	$mail->SMTPSecure = 'ssl';
-	$mail->Host = "smtp@email.com"; //SMTP host
+	$mail->Host = "smtp.gmail.com"; //SMTP host
 	$mail->Port = 587;
-	$mail->Username = "person@email.com"; //your email
-	$mail->Password = "**********"; // your SMTP email password
+	$mail->Username = "infsphotobooth@gmail.com"; //your email
+	$mail->Password = "infsphotobooth123"; // your SMTP email password
 
-	$mail->SetFrom('person@email.com', 'Web App');
+	$mail->SetFrom('infsphotobooth@gmail.com', 'Web App');
 	$mail->Subject = ($subject);
 	$mail->MsgHTML($message);
-	$mail->From = "person@email.com"; //email retrieved from database of current logged in user
+	$mail->From = "infsphotobooth@gmail.com"; //email retrieved from database of current logged in user
 	$mail->FromName= ($first_name . " " . $last_name);
 
 	/*
@@ -54,20 +72,4 @@ if(isset($_POST['submit'])){
 	}
 ?>
 
-<!DOCTYPE html>
-<head>
-<title>Form submission</title>
-</head>
-<body>
-
-<form action="" method="post">
-First Name: <input type="text" name="first_name"><br>
-Last Name: <input type="text" name="last_name" ><br>
-Email: <input type="text" name="email"><br>
-Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
-<input type="submit" name="submit" value="Submit">
-</form>
-
-</body>
-</html>
 
