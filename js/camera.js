@@ -32,6 +32,8 @@ function assignElements() {
   filterRight = document.getElementById("filterRight");
   filterRight.addEventListener("click", changeFilter);
   emailButton = document.getElementById("emailButton");
+    emailSection = document.getElementById("emailHS");
+    console.log("emailHS is emailsection");
 };
 
 // Open Camera Application
@@ -116,6 +118,8 @@ function captureImage() {
     filterLeft.style.display = "inline-block";
     filterRight.style.display = "inline-block";
     emailButton.style.display = "inline-block";
+    emailSection.style.display = "inline-block";
+      console.log("emailsection display");
     canvas.width = width;
     canvas.height = height;
     context.drawImage(video,0,0,width,height);
@@ -139,6 +143,8 @@ function captureImage() {
     filterLeft.style.display = "none";
     filterRight.style.display = "none";
     emailButton.style.display = "none";
+      emailSection.style.display = "none";
+      console.log("emailsection hide");
 
   }
 };
@@ -149,7 +155,7 @@ function postImage(data) {
   xhttp.open("POST","imageSave.php", true,'root','');
   xhttp.send(data);
   }
-  console.log("trying to post shit");
+  console.log("trying to post things");
 
 function changeFilter(x) {
   if (x.target.id == "filterRight") {

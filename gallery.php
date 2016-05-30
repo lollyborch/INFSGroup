@@ -76,9 +76,9 @@ if (isset($_SESSION['firstname']))
         <p>
           The Film Noir photobooth is designed to be a fun and playful image
           capture website where users can save and add filters to photos they
-          take using their computers webcam. Different filters can be added to
+          take using their computers webcam. </p><p>Different filters can be added to
           the images to create various effects and the resulting images are saved
-          into the users gallery. Alternatively these images can be sent via
+          into the users gallery.</p><p> Alternatively these images can be sent via
           email to share with friends and family. 
         </p>
       </div>

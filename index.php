@@ -3,6 +3,7 @@ session_start();
 include ("database.php");
 $msg1 = '';
 $msg2 = '';
+$msg3 = '';
 
 //echo $_SESSION['firstname'];
 $hello = $_SESSION['firstname'];
@@ -52,7 +53,7 @@ else
       <nav>
         <ul>
           <li><a href="index.php">Home</a></li>
-          <li><a id="aboutButton" href=#1 >About</a></li>
+          <li><a id="aboutButton" href=#1 >About</a></li>      
           <?php echo $gallery; ?>
 
         </ul>
@@ -78,7 +79,7 @@ else
             <button id="takePhotoButton">Take Photo</button>
         </div>
         <div class="buttons-right">
-            <button id="emailButton">Email to Friend</button>
+            <a id="emailButton" href="#emailHS">Email to Friend</a>
             <i id="filterLeft" class="fa fa-chevron-left" aria-hidden="true"></i>
             <i id="filterRight" class="fa fa-chevron-right" aria-hidden="true"></i>
         </div>
@@ -145,13 +146,42 @@ else
         <p>
           The Film Noir photobooth is designed to be a fun and playful image
           capture website where users can save and add filters to photos they
-          take using their computers webcam. Different filters can be added to
+          take using their computers webcam. 
+            </p><p>Different filters can be added to
           the images to create various effects and the resulting images are saved
-          into the users gallery. Alternatively these images can be sent via
+          into the users gallery.</p><p> Alternatively these images can be sent via
           email to share with friends and family. 
         </p>
       </div>
     </section>
+        
+<!--START EMAIL FORM-->
+    
+    <section class="loginbox" id="emailHS">
+        <h1>Email your photo</h1>
+        <p class="submitmessage"><?php echo $msg3;?></p>
+    
+
+<form method="POST" action="">
+            <div id="flexform">
+                <label>First name: &nbsp; </label> <input type="text" id="first_name" name="first_name" required />
+            </div>
+            <div id="flexform">
+                <label>Last name: &nbsp; </label> <input type="text" id="last_name" name="last_name" required />
+            </div>
+            <div id="flexform">
+                <label>To email: &nbsp; </label> <input type="email" id="email" name="email" required />
+            </div>
+            <div id="flexform">
+                <label>Message: &nbsp; </label> <textarea rows="5" name="message" cols="30" email="message"></textarea>
+            </div>
+            <div>
+                <input type="submit" name="submit" id="submit" value="Submit" required />
+            </div>
+        
+        </form>
+        
+        </section>
 <!--End Body container-->
     </div>
 <!-- FOOTER START -->

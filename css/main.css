@@ -147,7 +147,7 @@
 
 
     /* About Modal Styling */
-    #aboutModal, #loginModal {
+    #aboutModal, #loginModal, #emailModal {
         background-color: white;
         display: none;
         position: fixed;
@@ -161,7 +161,7 @@
         padding: 50px;
     }
 
-    #closeAbout, #closeLogin {
+    #closeAbout, #closeLogin, #closeEmail {
         position: fixed;
         left: 83%;
         top: 18%;
@@ -268,12 +268,16 @@
     }
 
     #filterLeft {
-      /*left: 2%;
-      margin-left: -65%;*/
+      left: 2%;
+      margin-left: -65%;
     }
-
+  
     #emailButton {
-         /* left: -75%; */
+          left: -75%; 
+    }
+    
+    #emailHS {
+        display: none;
     }
 
    /* #video {

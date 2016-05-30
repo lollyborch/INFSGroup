@@ -1,32 +1,25 @@
-window.onload = function(){
-    var aboutModal = document.getElementById("aboutModal");
-    var aboutButton = document.getElementById("aboutButton");
+var aboutModal = document.getElementById("aboutModal");
+var aboutButton = document.getElementById("aboutButton");
 
-    var loginModal = document.getElementById("loginModal");
-    var loginButton = document.getElementById("loginButton");
+var loginModal = document.getElementById("loginModal");
+var loginButton = document.getElementById("loginButton");
 
-    var closeAbout = document.getElementById("closeAbout");
-    var closeLogin = document.getElementById("closeLogin");
+var closeAbout = document.getElementById("closeAbout");
+var closeLogin = document.getElementById("closeLogin");
 
 
-    aboutButton.onclick = function() {
-      aboutModal.style.display = "block";
-    }
-
-    loginButton.onclick = function() {
-      loginModal.style.display = "block";
-    }
-
-    closeAbout.onclick = function() {
-      aboutModal.style.display = "none";
-    }
-
-    closeLogin.onclick = function() {
-      loginModal.style.display = "none";
-    } 
+aboutButton.onclick = function() {
+  aboutModal.style.display = "block";
 }
 
+loginButton.onclick = function() {
+  loginModal.style.display = "block";
+}
 
-$(document).on('click','#closeAbout',function() {
-    alert("Hello World");
-}); 
+closeAbout.onclick = function() {
+  aboutModal.style.display = "none";
+}
+
+closeLogin.onclick = function() {
+  loginModal.style.display = "none";
+}
