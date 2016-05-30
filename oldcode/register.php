@@ -78,20 +78,19 @@ if(isset($_POST["submit"]))
             
             <form method="POST" action="">
             <div id="flexform">
-                <label>First name: &nbsp; </label> <input type="text" id="firstname" name="firstname" required />
+                <label>First name: &nbsp; </label> <input type="text" id="first_name" name="first_name" required />
             </div>
             <div id="flexform">
-                <label>Last name: &nbsp; </label> <input type="text" id="lastname" name="lastname" required />
+                <label>Last name: &nbsp; </label> <input type="text" id="last_name" name="last_name" required />
             </div>
             <div id="flexform">
-                <label>Email: &nbsp; </label> <input type="email" id="email" name="email" required />
+                <label>To email: &nbsp; </label> <input type="email" id="email" name="email" required />
             </div>
             <div id="flexform">
-                <label>Password: &nbsp; </label> <input type="password" id="password" name="password" required />
+                <label>Message: &nbsp; </label> <textarea rows="5" name="message" cols="30" email="message"></textarea>
             </div>
             <div>
-                <p class="registerText"><a href="index.php#2">Login to your account</a></p>
-                <input type="submit" name="submit" id="submit" value="Register" required />
+                <input type="submit" name="submit" id="submit" value="Submit" required />
             </div>
         
         </form>

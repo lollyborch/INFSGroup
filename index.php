@@ -89,7 +89,7 @@ else
       <div class="loginleft">
         <p id="closeLogin">X</p>
         <h1>Login to Photoshot</h1>
-          <p><?php echo $msg1;?></p>
+          <p class="submitmessage"><?php echo $msg1;?></p>
 
         <?php
         // checks is 'error' variable has been set
@@ -116,7 +116,7 @@ else
     <div class="registerright">
          <h1>Register for Photoshot</h1>
 
-            <p><?php echo $msg2; ?></p>
+            <p class="submitmessage"><?php echo $msg2; ?></p>
 
             <form method="POST" action="registermodal.php">
             <div id="flexform">

@@ -57,7 +57,7 @@ if(isset($_POST["submit"]))
 		else
 		{
             $_SESSION['error'] = "error Username or Password!!";
-			echo "nope-ity nope nope email password wrongs";
+			//echo "nope-ity nope nope email password wrongs";
             $msg1 = "The email or password entered was incorrect.  Please try again.";
 		}
 	}

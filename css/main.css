@@ -297,8 +297,9 @@
     .loginbox {
         background-color: white;
         color: black;
-        margin: 100px;
+        margin: 25px 200px;
         padding: 25px 50px 50px ;
+        opacity: 0.9;
     }
 
     #flexform {
@@ -306,11 +307,11 @@
         padding-bottom: 20px;
     }
 
-    input {
+    input, textarea {
       flex: 1;
     }
 
-    label, input {
+    label, input, textarea {
         font-size: 22px;
     }
 
@@ -320,6 +321,10 @@
     border: none;
     border-radius: 1px;
     float: left;
+    }
+    
+    .submitmessage{
+        color: red;
     }
 
     .registerText {
