@@ -12,12 +12,12 @@ aboutButton.onclick = function() {
   aboutModal.style.display = "block";
 }
 
-loginButton.onclick = function() {
-  loginModal.style.display = "block";
-}
-
 closeAbout.onclick = function() {
   aboutModal.style.display = "none";
+}
+
+loginButton.onclick = function() {
+  loginModal.style.display = "block";
 }
 
 closeLogin.onclick = function() {

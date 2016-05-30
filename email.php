@@ -35,8 +35,9 @@ else
 
 //get img file path from src via http://stackoverflow.com/questions/138313/how-to-extract-img-src-title-and-alt-from-html-using-php
     
-$url="https://infs3202photobooth.azurewebsites.net/index.php";
-//$url="http://localhost:8888/index.php";
+//$url="https://infs3202photobooth.azurewebsites.net/email.php";
+$url="http://localhost:8888/email.php";
+//$url = "http://lillyhb.com/";
 
 $html = file_get_contents($url);
 
@@ -47,6 +48,7 @@ $doc = new DOMDocument();
 $photoid = $doc->getElementById('photo');
 //gets src filepath of photo to attach to message
 $filepath = $photoid->getAttribute('src');
+//$filepath2 = "http://lillyhb.com/" . $filepath;
 echo $filepath;
 //echo "<p style='color:white'>" . "hello" . "</p>";
 
@@ -87,7 +89,7 @@ if(isset($_POST['submit'])){
 	
 	//Provide file path and name of the attachments
 	//$mail->addAttachment("file.txt", "File.txt"); // The image file from the database        
-	//$mail->addAttachment("images/profile.png"); //Filename is optional
+	$mail->addAttachment($filepath); //Filename is optional
 	
 
 	$mail->addAddress($to);
@@ -151,7 +153,7 @@ if(isset($_POST['submit'])){
         <p class="submitmessage"><?php echo $msg3;?></p>
     
 
-<form method="POST" action="">
+<form method="POST" action="" enctype="multipart/form-data" >
             <div id="flexform">
                 <label>First name: &nbsp; </label> <input type="text" id="first_name" name="first_name" required />
             </div>
