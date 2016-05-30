@@ -22,3 +22,21 @@ FileZilla-download/css/main.css
 FileZilla-download/js/modal.js
 
 FileZilla-download/registermodal.php
+
+.user.ini
+
+localdatabase/database.php
+
+localdatabase/infs3202photobooth_lb.sql
+
+PDO/checklogin_2.php
+
+working code/checklogin.php
+
+working code/database.php
+
+PDO/database_2.php
+
+PDO/checklogin_2.php
+
+PDO/checklogin_2.php
