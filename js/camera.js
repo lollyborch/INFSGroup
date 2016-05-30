@@ -158,12 +158,18 @@ function postImage(data) {
   console.log("trying to post things");
 
 function changeFilter(x) {
+  if (i == 8) {
+    i = 0;
+  }
   if (x.target.id == "filterRight") {
     photo.classList.remove("filter" + i);
     i += 1;
     photo.classList.add("filter" + i);
   }
   else {
+    if (i == 0) {
+      i = 7;
+    }
     photo.classList.remove("filter" + i);
     i -= 1;
     photo.classList.add("filter" + i);

@@ -213,7 +213,7 @@
       padding: 0px;*/
 
       /*max-width: 1020px;*/
-        width: 60%;
+      /*  width: 60%; */
         display: none;
         position: relative;
         left: 20%;
@@ -249,7 +249,7 @@
         position: relative;
     clear: none;
     float: right;
-    margin-right: -9%;
+    margin-right: 20%;
     margin-top: 1%;
     }
 
@@ -271,11 +271,11 @@
       left: 2%;
       margin-left: -65%;
     }
-  
+
     #emailButton {
-          left: -75%; 
+          left: -75%;
     }
-    
+
     #emailHS {
         display: none;
     }
@@ -298,6 +298,35 @@
   -webkit-filter: blur(5px);
 }
 
+.filter2 {
+  filter: brightness(0.6);
+  -webkit-filter: brightness(0.6);
+}
+
+.filter3 {
+  filter: contrast(300%);
+  -webkit-filter: contrast(300%);
+}
+
+.filter4 {
+  filter: sepia(100%);
+  -webkit-filter: sepia(100%);
+}
+
+.filter5 {
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%);
+}
+
+.filter6 {
+  filter: hue-rotate(180deg);
+  -webkit-filter: hue-rotate(180deg);
+}
+
+.filter7 {
+  filter: invert(80%);
+  -webkit-filter: invert(80%);
+}
     .loginbox {
         background-color: white;
         color: black;
@@ -326,7 +355,7 @@
     border-radius: 1px;
     float: left;
     }
-    
+
     .submitmessage{
         color: red;
     }
@@ -338,10 +367,10 @@
     .bodybackground {
         background-image: 'images/hero2.jpg';
     }
-    
-    
+
+
     /* social media icons from perfecticons.com */
-    
+
     .soc {
     overflow:hidden;
     margin:0; padding:0;
@@ -418,6 +447,16 @@
         content:'c';
     }
 }
+
+@media only screen and (min-width: 1500px) {
+
+  .camera {
+    left: 30%;
+  }
+
+  .loginbox {
+    margin-left: 35%;
+  }
 
 @media only screen and (max-width:1280px){
 
@@ -603,7 +642,3 @@
 }
 
 }
-
-
-
-
