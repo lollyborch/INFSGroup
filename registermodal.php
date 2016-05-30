@@ -1,4 +1,6 @@
 <?php
+
+//register function from index.php modal
 session_start();
 //echo $_POST['email'].$_POST['password'];
 

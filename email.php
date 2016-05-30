@@ -1,4 +1,7 @@
 <?php
+//stand alone email file works and sends text based messages.
+
+
 session_start();
 include ("database.php");
 $msg3 = '';
@@ -29,6 +32,9 @@ else
     
 ?>
 <?php 
+
+
+//phpmaler function based on https://github.com/PHPMailer/PHPMailer/blob/master/examples/gmail.phps
 
 require ('PHPMailer/PHPMailerAutoload.php');
 

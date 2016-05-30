@@ -7,7 +7,7 @@ var loginButton = document.getElementById("loginButton");
 var closeAbout = document.getElementById("closeAbout");
 var closeLogin = document.getElementById("closeLogin");
 
-
+//changes modals from dispaly none to display block
 aboutButton.onclick = function() {
   aboutModal.style.display = "block";
 }

@@ -1,4 +1,6 @@
 <?php
+
+//login function from index.php modal
 session_start();
 //echo $_POST['email'].$_POST['password'];
 
@@ -44,12 +46,6 @@ if(isset($_POST["submit"]))
 			$_SESSION['email']=$email;
             $_SESSION['auth'] = true;
 			$_SESSION['error']="";
-            //echo count($resultarray);
-            /*for (i=0; i<count($resultarray); i++){
-                $slice = array_slice($resultarray, i);
-                echo
-            }*/
-            //echo array_values($resultarray);
             header('location: index.php');
             exit;
             //echo "email is on!";

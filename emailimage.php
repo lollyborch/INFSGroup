@@ -1,16 +1,23 @@
 <?php
 
+//email image function from index.php
+
+session_start();
+include ("database.php");
+
 //get img file path from src via http://stackoverflow.com/questions/138313/how-to-extract-img-src-title-and-alt-from-html-using-php
     
-//$url="https://infs3202photobooth.azurewebsites.net/index.php";
-$url="http://localhost:8888/index.php";
+$url="https://infs3202photobooth.azurewebsites.net/index.php";
+//$url="http://localhost:8888/index.php";
 
 $html = file_get_contents($url);
 
 $doc = new DOMDocument();
 @$doc->loadHTML($html);
 
+//finds id=photo
 $photoid = $doc->getElementById('photo');
+//gets src filepath of photo to attach to message
 $filepath = $photoid->getAttribute('src');
 echo $filepath;
 
@@ -51,7 +58,7 @@ if(isset($_POST['submit'])){
 	
 	//Provide file path and name of the attachments
 	//$mail->addAttachment("file.txt", "File.txt"); // The image file from the database        
-	$mail->addAttachment($filepath); //Filename is optional
+	//$mail->addAttachment($filepath); //Filename is optional
 	
 
 	$mail->addAddress($to);
