@@ -27,7 +27,7 @@ if(isset($_POST["submit"]))
             $row = mysqli_fetch_assoc($result);
             $_SESSION['firstname'] = $row["firstname"];
 						$_SESSION['userID'] = $row["user_ID"];
-            printf ("%s (%s)\n", $row["user_ID"], $row["lastname"]);
+           // printf ("%s (%s)\n", $row["user_ID"], $row["lastname"]);
 
 
             /* free result set */
