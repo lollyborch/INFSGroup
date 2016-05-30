@@ -26,6 +26,7 @@ else
        $account = "<a id='loginButton' href='#2'>Login/Register</a>";
        //$account = "hello2";
     }
+    
 ?>
 <?php 
 
@@ -61,11 +62,11 @@ if(isset($_POST['submit'])){
 	$mail->From = "infsphotobooth@gmail.com"; //email retrieved from database of current logged in user
 	$mail->FromName= ($first_name . " " . $last_name);
 
-	/*
+	
 	//Provide file path and name of the attachments
 	$mail->addAttachment("file.txt", "File.txt"); // The image file from the database        
 	$mail->addAttachment("images/profile.png"); //Filename is optional
-	*/
+	
 
 	$mail->addAddress($to);
 
