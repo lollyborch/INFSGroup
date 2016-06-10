@@ -1,0 +1,605 @@
+/* social icons from perfecticons.com */
+
+@font-face {
+    font-family: 'si';
+    src: url('../fonts/socicon.eot');
+    src: url('../fonts/socicon.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/socicon.woff') format('woff'),
+         url('../fonts/socicon.ttf') format('truetype'),
+         url('../fonts/socicon.svg#icomoonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family:si;
+        src: url(../fonts/socicon.svg) format(svg);
+    }
+}
+
+@media screen{
+
+  /* Tacced on at the end to make responsive later */
+  .galleryContainer {
+    width: 25%;
+    padding: 1%;
+    position: relative;
+    left: 10%;
+    display: inline-block;
+  }
+
+  .galleryImg {
+    width: 100%;
+  }
+
+    body {
+
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 300;
+
+    }
+
+    html {
+      background: url(../images/hero2.jpg) no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    html, body {
+    height: 100%;
+    margin: 0;
+}
+
+    /* Stlying for Header and Footer */
+    nav ul, footer ul {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      margin:0px;
+      padding:0px;
+      color: white;
+      list-style-type: none;
+    }
+
+    nav ul li {
+      padding: 10px 50px 10px;
+      font-size: 24px;
+    }
+
+    nav ul li:hover {
+      background-color: #2b2b2b;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Stlying the Hero Image container */
+    .hero {
+      position: relative;
+    }
+
+    /* Stlying the Call to Action Hero Image */
+    .callToAction {
+      height: 100%;
+      width: 99%;
+      padding-left: 15px;
+    }
+
+    /* Stlying Call to Action button */
+    .callToActionButton {
+      /* appearance */
+      background-color: #c91c1c;
+      border-radius: 1px;
+      padding: 10px;
+      width:200px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+      /* position */
+      position: absolute;
+      left: 43%; /* 50% - (width/2) */
+      /*top: 40%;*/
+      top: 250px;
+      /*margin-top: 10%;*/
+      width: 14%;
+      /* display of children */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+    .bodycontainer {
+        padding: 10px;
+    min-height: -webkit-calc(100% - 100px);     /* Chrome */
+    min-height: -moz-calc(100% - 100px);     /* Firefox */
+    min-height: calc(100% - 100px);     /* native */
+    }
+
+    footer {
+        /*position: absolute;
+        bottom: 0;*/
+        width: 100%;
+        margin-top: -20px;
+        padding: 0px;
+        background-color: rgba(0,0,0,0.7);
+        clear:both;
+        position: relative;
+    }
+
+    /* Stlying for Footer */
+    footer p {
+      float: right;
+      color: grey;
+      margin: -35px 20px;
+    }
+
+    footer ul li {
+      padding: 0px 10px;
+    }
+
+    .socialImage {
+      height: 50px;
+    }
+
+
+    /* About Modal Styling */
+    #aboutModal, #loginModal {
+        background-color: white;
+        display: none;
+        position: fixed;
+        z-index: 1;
+        width: 60%;
+        height: auto;
+        min-height: 200px;
+        left: 20%;
+        top: 20%;
+        border-radius: 1px;
+        padding: 50px;
+    }
+
+    #closeAbout, #closeLogin {
+        position: fixed;
+        left: 83%;
+        top: 18%;
+        color: red;
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    .loginleft {
+       width: 45%;
+       margin-right: 10px;
+        float: left;
+
+    }
+
+    .registerright {
+        width: 45%;
+       margin-left: 10px;
+        float: right;
+
+    }
+
+    .hellologout {
+        color: white;
+    float: right;
+    clear: none;
+    margin-top: -35px;
+    margin-right: 25px;
+    }
+
+    .hellologout a{
+        color: white;
+        text-decoration: underline;
+    }
+
+    /* Camera Styling */
+    .camera {
+        /*previous
+      /* test
+      max-width: 1020px;
+      width: 55%;
+      /* end test
+      display: none;
+      position: relative;
+      left: 450px;
+      top: -825px;
+      margin: 0px;
+      border: 0px;
+      padding: 0px;*/
+
+      /*max-width: 1020px;*/
+        width: 60%;
+        display: none;
+        position: relative;
+        left: 20%;
+        min-height: 570px;
+        /*top: -50px;*/
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+    }
+
+    #takePhotoButton {
+    /*  left: 37%;
+    top: 95%;*/
+    position: relative;
+    padding: 5px 50px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 1px;
+    float: left;
+    font-size: 22px;
+    }
+
+    .buttons-left{
+        position: relative;
+    clear: none;
+    float: left;
+    margin-left: 12%;
+        margin-top: 1%;
+    }
+
+    .buttons-right{
+        position: relative;
+    clear: none;
+    float: right;
+    margin-right: -9%;
+    margin-top: 1%;
+    }
+
+    .filterbuttons {
+    margin-top: -10%;
+}
+
+    #filterLeft, #filterRight, #emailButton {
+      display: none;
+     /* position: absolute;
+      top: 90%;
+      left: 5%;
+      color: red;*/
+    color: red;
+    position: relative;
+    }
+
+    #filterLeft {
+      /*left: 2%;
+      margin-left: -65%;*/
+    }
+
+    #emailButton {
+         /* left: -75%; */
+    }
+
+   /* #video {
+    max-height: 450px;
+    width:100%
+}*/
+
+#photo, #video {
+    /*margin-bottom: 85px;*/
+    max-height: 450px;
+    width: auto;
+    margin-left: 10%;
+}
+
+
+.filter1 {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+    .loginbox {
+        background-color: white;
+        color: black;
+        margin: 25px 200px;
+        padding: 25px 50px 50px ;
+        opacity: 0.9;
+    }
+
+    #flexform {
+        display:flex;
+        padding-bottom: 20px;
+    }
+
+    input, textarea {
+      flex: 1;
+    }
+
+    label, input, textarea {
+        font-size: 22px;
+    }
+
+    input[type=submit] {
+    padding:10px 50px;
+    background:#ccc;
+    border: none;
+    border-radius: 1px;
+    float: left;
+    }
+    
+    .submitmessage{
+        color: red;
+    }
+
+    .registerText {
+        float: right;
+    }
+
+    .bodybackground {
+        background-image: 'images/hero2.jpg';
+    }
+    
+    
+    /* social media icons from perfecticons.com */
+    
+    .soc {
+    overflow:hidden;
+    margin:0; padding:0;
+    list-style:none;
+    }
+
+    .soc li {
+        display:inline-block;
+        *display:inline;
+        zoom:1;
+    }
+
+    .soc li a {
+        font-family:si!important;
+        font-style:normal;
+        font-weight:400;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -ms-box-sizing:border-box;
+        -o-box-sizing:border-box;
+        box-sizing:border-box;
+
+        -o-transition:.1s;
+        -ms-transition:.1s;
+        -moz-transition:.1s;
+        -webkit-transition:.1s;
+        transition:.1s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+
+        overflow:hidden;
+        text-decoration:none;
+        text-align:center;
+        display:block;
+        position: relative;
+        z-index: 1;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 30px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+        margin-right: 10px;
+        color: #fff;
+
+    }
+
+    .soc a:hover {
+        z-index: 2;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    .soc-icon-last{
+        margin:0 !important;
+    }
+
+    .soc-facebook:before {
+        content:'b';
+    }
+    .soc-twitter:before {
+        content:'a';
+    }
+    .soc-instagram:before {
+        content:'x';
+    }
+
+    .soc-google:before {
+        content:'c';
+    }
+}
+
+@media only screen and (max-width:1280px){
+
+    .callToActionButton {
+        /* 50% - (width/2) */
+        left: 41%;
+        width: 18%;
+    }
+
+    #closeAbout, #closeLogin {
+        left: 85%;
+    }
+}
+
+@media only screen and (max-width:995px){
+
+    .callToActionButton {
+        /* 50% - (width/2) */
+        left: 39%;
+        width: 22%;
+    }
+
+    .callToAction {
+        margin-top: 5%;
+    }
+
+    .camera {
+        left:15%;
+    }
+
+    #closeAbout, #closeLogin {
+        left: 86%;
+    }
+}
+
+@media only screen and (max-width:900px){
+
+    .camera {
+        left:10%;
+    }
+
+}
+
+@media only screen and (max-width:830px){
+
+    .callToActionButton {
+        /* 50% - (width/2) */
+        left: 37%;
+        width: 26%;
+    }
+
+    .callToAction {
+        margin-top: 7%;
+    }
+
+    .camera {
+        left:5%;
+    }
+
+}
+
+@media only screen and (max-width:800px){
+
+    .callToActionButton {
+        font-size: 22px;
+    }
+
+    nav ul li {
+    font-size: 18px;
+    padding: 10px 10px;
+    }
+
+    .hellologout {
+    margin-top: -30px;
+    font-size: 14px;
+    }
+
+    #photo, #video {
+    max-width: 500px;
+        margin-left: 0;
+}
+
+    .buttons-left{
+    margin-left: 1%
+    }
+
+    nav ul {
+        justify-content: initial;
+        margin-left: 11%;
+    }
+
+}
+
+@media only screen and (max-width:700px){
+
+    .callToActionButton {
+        font-size: 22px;
+    }
+
+
+
+}
+
+@media only screen and (max-width:650px){
+
+    .buttons-left, .buttons-right{
+    clear: both;
+    float: left;
+    }
+
+    #closeAbout, #closeLogin {
+        top: 18.5%;
+    }
+}
+
+@media only screen and (max-width:630px){
+
+    .callToActionButton {
+        /* 50% - (width/2) */
+        left: 35%;
+        width: 30%;
+    }
+
+    footer p {
+        text-align:center;
+        float: none;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .callToAction {
+    width: 130%;
+    padding-left: 0;
+}
+
+@media only screen and (max-width:600px){
+
+
+   #photo, #video {
+    max-width: 400px;
+}
+
+}
+
+@media only screen and (max-width:545px){
+
+    .callToActionButton {
+        /* 50% - (width/2) */
+        left: 32%;
+        width: 36%;
+    }
+
+    .callToAction {
+    width: 185%;
+    margin-left: -23%;
+}
+
+}
+
+@media only screen and (max-width:475px){
+
+    .callToActionButton {
+        /* 50% - (width/2) */
+        left: 20%;
+        width: 60%;
+        font-size: 28px;
+    }
+
+    .callToAction {
+    width: 225%;
+    margin-left: -45%;
+    margin-top: 13%;
+    }
+
+    .hellologout {
+    margin-top: 0px;
+        float: left;
+    margin-left: 13%;
+    }
+
+    #photo, #video {
+    max-width: 350px;
+}
+
+}
+
+
+
+

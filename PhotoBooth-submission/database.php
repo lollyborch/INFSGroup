@@ -1,8 +1,7 @@
 <?php
 
 //registration form from http://www.eggslab.net/creating-registration-form-with-php-and-mysqli/
-
-//local details
+	//local details
 	/*define('DB_HOST', 'localhost');
 	define('DB_USERNAME', 'root');
 	define('DB_PASSWORD', 'root');
@@ -13,8 +12,6 @@
 	define('DB_USERNAME', 'bc1b91c9e04598');
 	define('DB_PASSWORD', '2a10133a');
 	define('DB_DATABASE', 'infs3202photobooth');
-
-
 	$db = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
     if (mysqli_connect_error()) {
